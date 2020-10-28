@@ -57,7 +57,7 @@ public class UserArticleService {
                         "title", "articleAbstract", "filePath", "status"}, null
         );
         if (returnMap == null)
-            throw new InternalServerError("in Article Service, in getArticleDetail");
+            throw new InternalServerError("in Article MainService.Service, in getArticleDetail");
         Set<Author> returnAuthors = new HashSet<>();
         for(Pair<Author, Integer> p: article.getAuthors()){
             returnAuthors.add(p.getKey());

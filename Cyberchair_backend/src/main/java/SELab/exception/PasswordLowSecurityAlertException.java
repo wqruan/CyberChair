@@ -6,6 +6,6 @@ public class PasswordLowSecurityAlertException extends AuthenticationException {
     private static final long serialVersionUID = -6074753940710869975L;
 
     public PasswordLowSecurityAlertException() {
-        super("Password is of low security!");
+        super("Password is of low MainService.security!");
     }
 }

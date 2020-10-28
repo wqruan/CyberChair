@@ -147,7 +147,7 @@ class UtilServiceTest {
 
         Exception thrown = assertThrows(PasswordLowSecurityAlertException.class,
                 ()-> utilService.Register(registerRequest1));
-        assertEquals("Password is of low security!", thrown.getMessage());
+        assertEquals("Password is of low MainService.security!", thrown.getMessage());
         userRepository.deleteAll();
     }
 
@@ -159,7 +159,7 @@ class UtilServiceTest {
 
         Exception thrown = assertThrows(PasswordLowSecurityAlertException.class,
                 ()-> utilService.Register(registerRequest1));
-        assertEquals("Password is of low security!", thrown.getMessage());
+        assertEquals("Password is of low MainService.security!", thrown.getMessage());
         userRepository.deleteAll();
     }
 

@@ -78,7 +78,7 @@ export const router = new Router({
 // 前端登录拦截
 router.beforeEach(function (to, from ,next) {
   if (to.matched.some(record => record.meta.requireAuth)) {
-    // console.log('lanjie' + store.state.token)
+     console.log('lanjie' + store.state.token)
     if (store.state.token != "undefined" && store.state.token != null) {
       next()
     } else {

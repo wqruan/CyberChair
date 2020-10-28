@@ -59,8 +59,8 @@ public class UtilService {
             }
             if (appearance < 2) throw new PasswordLowSecurityAlertException();
         }
-        if (!Pattern.matches(emailPattern, email))
-            throw new IllegalEmailAddressException();
+      //  if (!Pattern.matches(emailPattern, email))
+         //   throw new IllegalEmailAddressException();
     }
 
     public ResponseWrapper<?> Register(RegisterRequest request) {

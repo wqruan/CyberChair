@@ -104,6 +104,7 @@ public class Service {
         if(ret.getResponseMessage().equals(ResponseGenerator.success)){
             logger.info("User named "+request.getUsername() +" login success");
         }
+        System.out.println(ret.getResponseBody());
         return  ret;
     }
 

@@ -39,7 +39,7 @@ public class UtilController {
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginRequest request) {
         logger.debug("LoginForm: " + request.toString());
-
+        logger.info(request.toString());
         return ResponseEntity.ok(service.login(request));
     }
 

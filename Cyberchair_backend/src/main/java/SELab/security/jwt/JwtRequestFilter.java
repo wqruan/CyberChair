@@ -29,6 +29,9 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         JwtTokenUtil jwtUtil = new JwtTokenUtil(new JwtConfigProperties());//新建JwtTokenUtil实例用于Token校验
         final String authorizationHeader = request.getHeader("Authorization");
 
+        logger.info(request.getRequestURI());
+
+        logger.info(authorizationHeader);
         String username = null;
         String jwt = null;
 
@@ -47,7 +50,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
                         userDetails, null, userDetails.getAuthorities());
                 usernamePasswordAuthenticationToken
                         .setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
-                logger.info("authenticated user " + username + ", setting security context");
+                logger.info("authenticated user " + username + ", setting MainService.security context");
                 SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);//请求被许可
             }
         }

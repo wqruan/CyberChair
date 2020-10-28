@@ -61,7 +61,7 @@ public class MeetingArticleController {
 
     @PostMapping("/meeting/publish")
     public ResponseEntity<?> reviewPublish(@RequestBody ResultPublishRequest request) {
-        logger.debug("Review Request to Publish: " + request.toString());
+        logger.debug("Review MainService.Request to Publish: " + request.toString());
         return ResponseEntity.ok(service.reviewPublish(request));
     }
 }

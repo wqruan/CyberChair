@@ -61,7 +61,7 @@ public class ControllerAdvisor extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(PasswordLowSecurityAlertException.class)
     ResponseEntity<?> PasswordLowSecurityAlertExceptionHandler(PasswordLowSecurityAlertException ex) {
-        return ErrorResponseConstruct(400, "password security low", HttpStatus.BAD_REQUEST);
+        return ErrorResponseConstruct(400, "password MainService.security low", HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(IllegalEmailAddressException.class)
