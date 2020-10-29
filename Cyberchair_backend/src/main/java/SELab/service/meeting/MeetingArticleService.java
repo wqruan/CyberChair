@@ -110,11 +110,11 @@ public class MeetingArticleService {
         reviewRelationRepository.save(reviewRelation);
         ArticleStatusUpdate(Long.valueOf(request.getArticleid()));
 
-        List<ReviewRelation> reviewRelations = reviewRelationRepository.findByReviewStatusAndMeetingId(ReviewStatus.unReviewed,meeting.getId());
+   /*     List<ReviewRelation> reviewRelations = reviewRelationRepository.findByReviewStatusAndMeetingId(ReviewStatus.unReviewed,meeting.getId());
         if(reviewRelations.isEmpty()){
             meeting.setStatus(MeetingStatus.reviewCompleted);
             meetingRepository.save(meeting);
-        }
+        }*/
 
         return new ResponseWrapper<>(200, ResponseGenerator.success, null);
     }
