@@ -1,15 +1,7 @@
 package MainService.Service;
 
-import MainService.domain.Meeting;
-import MainService.domain.ReviewRelation;
-import MainService.request.meeting.RebuttalRequest;
-import MainService.request.meeting.ReviewConfirmRequest;
-import MainService.request.meeting.ReviewRequest;
-import MainService.request.meeting.UpdateReviewRequest;
+import MainService.request.meeting.*;
 import MainService.request.user.ArticleRequest;
-import MainService.util.contract.MeetingStatus;
-import MainService.util.contract.RebuttalStatus;
-import MainService.util.contract.ReviewStatus;
 import MainService.util.response.ResponseGenerator;
 import MainService.util.response.ResponseWrapper;
 import org.slf4j.Logger;
@@ -136,5 +128,18 @@ public class Service {
         }
         return ret;
     }
-
+    public ResponseWrapper<?> getPostList(String articleId, String postStatus) {
+        ResponseWrapper<?> ret = articleService.getPostList(articleId,postStatus);
+        if(ret.getResponseMessage().equals(ResponseGenerator.success)){
+            logger.debug("Get postList article: ID " + articleId +" Post Status: " + postStatus);
+        }
+        return ret;
+    }
+    public ResponseWrapper<?> reviewPost(ReviewPostRequest request) {
+        ResponseWrapper<?> ret = articleService.reviewPost(request);
+        if(ret.getResponseMessage().equals(ResponseGenerator.success)){
+            logger.info("Review PostMessage: " + request.toString());
+        }
+        return ret;
+    }
 }

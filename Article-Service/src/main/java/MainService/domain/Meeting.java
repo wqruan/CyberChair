@@ -1,13 +1,12 @@
 package MainService.domain;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Set;
 
-@Entity
-public class Meeting {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class Meeting implements Serializable {
+
     private Long id;
 
     private String chairName;
@@ -16,7 +15,8 @@ public class Meeting {
     private String region;
     private String city;
     private String venue;
-    @ElementCollection
+
+
     private Set<String> topic;
     private String organizer;
     private String webPage;

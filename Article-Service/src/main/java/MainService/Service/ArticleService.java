@@ -3,10 +3,9 @@ package MainService.Service;
 import MainService.domain.*;
 import MainService.exception.*;
 import MainService.exception.user.ArticleNotFoundException;
+import MainService.repository.PostRepository;
 import MainService.repository.RebuttalRepository;
-import MainService.request.meeting.RebuttalRequest;
-import MainService.request.meeting.ReviewConfirmRequest;
-import MainService.request.meeting.UpdateReviewRequest;
+import MainService.request.meeting.*;
 import MainService.request.user.ArticleRequest;
 import MainService.util.contract.ArticleStatus;
 import MainService.util.contract.MeetingStatus;
@@ -14,7 +13,6 @@ import MainService.util.contract.RebuttalStatus;
 import MainService.util.contract.ReviewStatus;
 import MainService.repository.ArticleRepository;
 import MainService.repository.ReviewRelationRepository;
-import MainService.request.meeting.ReviewRequest;
 import MainService.util.response.ResponseGenerator;
 import MainService.util.response.ResponseWrapper;
 import javafx.util.Pair;
@@ -30,6 +28,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.sql.Timestamp;
 import java.util.*;
 
 /**
@@ -45,12 +44,15 @@ public class ArticleService {
     private ReviewRelationRepository reviewRelationRepository;
     @Autowired
     private RebuttalRepository rebuttalRepository;
+    @Autowired
+    private PostRepository postRepository;
 
     @Autowired
-    public ArticleService(ArticleRepository articleRepository, ReviewRelationRepository reviewRelationRepository,RebuttalRepository rebuttalRepository){
+    public ArticleService(ArticleRepository articleRepository, ReviewRelationRepository reviewRelationRepository,RebuttalRepository rebuttalRepository,PostRepository postRepository){
         this.articleRepository=articleRepository;
         this.reviewRelationRepository=reviewRelationRepository;
         this.rebuttalRepository=rebuttalRepository;
+        this.postRepository=postRepository;
     }
     @Transactional
     public ResponseWrapper<?> review(ReviewRequest request) {
@@ -287,6 +289,20 @@ public class ArticleService {
         return new ResponseWrapper<>(200, ResponseGenerator.success, respBody);
 
     }
+    @Transactional
+    public ResponseWrapper<?> reviewPost(ReviewPostRequest request) {
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        PostMessage post = new PostMessage(
+                findByUsername(request.getPosterName()).getId(),
+                Long.parseLong(request.getArticleId()),
+                Long.parseLong(request.getTargetId()),
+                request.getContent(),
+                request.getStatus(),
+                timestamp.toString()
+        );
+        postRepository.save(post);
+        return new ResponseWrapper<>(200, ResponseGenerator.success, null);
+    }
     //this function is used to guarantee a article can be upload or update
     private void authenticateArticle(Meeting meeting, User user) {
         if (meeting == null)
@@ -363,6 +379,39 @@ public class ArticleService {
         }
         return new ResponseWrapper<>(200, ResponseGenerator.success, null);
     }
+    public ResponseWrapper<?> getPostList(String articleId, String postStatus) {
+        ArrayList<PostMessage> postList = (ArrayList<PostMessage>) postRepository.findByArticleIdAndStatus(Long.parseLong(articleId),postStatus);
+        postList.sort(new Comparator<PostMessage>() {
+            @Override
+            public int compare(PostMessage o1, PostMessage o2) {
+                return Timestamp.valueOf(o1.getTimeStamp()).before(Timestamp.valueOf(o2.getTimeStamp()))?1:-1;
+            }
+        });
+        HashMap<String, ArrayList<HashMap<String, Object>>> body = new HashMap<>();
+        ArrayList<HashMap<String, Object>> retList = new ArrayList<>();
+
+        for(PostMessage x: postList){
+            HashMap<String,Object> ret = new HashMap<>();
+
+            String targetContent = "";
+            PostMessage target = postRepository.findById(x.getTargetId());
+            if(target!=null) {
+                User targetUser = findById(target.getPosterId());
+                targetContent = "Response to " + targetUser.getUsername() + ": " + target.getContent();
+            }
+            ret.put("postId",x.getId());
+            ret.put("targetContent",targetContent);
+            ret.put("postContent",x.getContent());
+            ret.put("posterName",findById((long)Long.valueOf(x.getPosterId())).getUsername());
+            ret.put("timeStamp",x.getTimeStamp());
+
+            retList.add(ret);
+        }
+        body.put("postlist",retList);
+
+        return new ResponseWrapper<>(200, ResponseGenerator.success, body);
+    }
+
     //Before use this internal method
     //please Guarantee that file is savable (not null)
     private void saveFileToServer(MultipartFile file, String rootDirPath)
@@ -428,10 +477,13 @@ public class ArticleService {
                 , User.class,1,5);
         return user;
     }
+    public User findById(long id){
+        return null;
+    }
     private void meetingStatusModifyBeforeRebuttal(Meeting meeting, String reviewConfirmed, String reviewConfirmed2) {
         if (reviewRelationRepository.findByReviewStatusAndMeetingId(reviewConfirmed, meeting.getId()).size() == reviewRelationRepository.findByMeetingId(meeting.getId()).size()) {
             setMeetingStatus(reviewConfirmed2);
-        }
+    }
     }
     public Meeting findByID(long id){
         return null;

@@ -7,10 +7,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Collection;
 
-@Entity
-public class User implements UserDetails {
+
+public class User implements UserDetails, Serializable {
 
     private static final long serialVersionUID = -6140085056226164016L;
 

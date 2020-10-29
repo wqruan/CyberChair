@@ -2,10 +2,7 @@ package MainService.Controller;
 
 import MainService.Service.Service;
 import MainService.domain.Author;
-import MainService.request.meeting.RebuttalRequest;
-import MainService.request.meeting.ReviewConfirmRequest;
-import MainService.request.meeting.ReviewRequest;
-import MainService.request.meeting.UpdateReviewRequest;
+import MainService.request.meeting.*;
 import MainService.request.user.ArticleRequest;
 import com.alibaba.fastjson.JSONArray;
 import javafx.util.Pair;
@@ -154,5 +151,15 @@ public class ArticleController {
     public ResponseEntity<?> updateReview(@RequestBody UpdateReviewRequest request) {
         logger.debug("update Review: " + request.toString());
         return ResponseEntity.ok(service.updateReview(request));
+    }
+    @PostMapping("/meeting/reviewPost")
+    public ResponseEntity<?> reviewPost(@RequestBody ReviewPostRequest request) {
+        logger.debug("Review post: " + request.toString());
+        return ResponseEntity.ok(service.reviewPost(request));
+    }
+    @GetMapping("/meeting/postList")
+    public ResponseEntity<?> getPostList(String articleId,String postStatus) {
+        logger.debug("Get postList article: ID " + articleId +" Post Status: " + postStatus);
+        return ResponseEntity.ok(service.getPostList(articleId,postStatus));
     }
 }

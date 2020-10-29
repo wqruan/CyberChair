@@ -2,6 +2,10 @@
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="GBK">
     <file url="file://$PROJECT_DIR$/src/main/java/MainService/config/CorsConfig.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/MainService/domain/Article.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/MainService/domain/Author.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/MainService/domain/Meeting.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/MainService/respository/ArticleRepository.java" charset="UTF-8" />
     <file url="PROJECT" charset="GBK" />
   </component>
 </project>
