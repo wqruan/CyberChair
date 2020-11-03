@@ -6,10 +6,9 @@ import javafx.util.Pair;
 import javax.persistence.*;
 import java.util.Set;
 
-@Entity
+
 public class Article {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+
     private Long id;
     private String contributorName;
     private String meetingName;
@@ -18,10 +17,9 @@ public class Article {
     private String articleAbstract;
     private String filePath;
     private String status;//accepted/rejected/queuing
-    @ElementCollection
+
     private Set<String> topic;
-    @ElementCollection
-    @Column(columnDefinition = "LONGVARBINARY")
+
     private Set<Pair<Author,Integer>> authors;
 
     public Article() {}
