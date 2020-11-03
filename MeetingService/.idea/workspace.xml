@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7de1db42-79cf-48e2-865a-648b8233869e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Article-Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/src/main/java/MainService/Service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/src/main/java/MainService/Service/ArticleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Service/ArticleService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Service/ArticleService$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Service/ArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Service/ArticleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/Controller/UtilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/Controller/UtilController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/Service/UtilService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/Service/UtilService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Controller/UtilController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Controller/UtilController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Service/UtilService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Service/UtilService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/domain/Author.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/domain/Meeting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/security/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SELab/remote/RemoteUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SELab/remote/RemoteUser.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1jiQqEd5tStFlzkjI54qYXVArWd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="lab2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="SELab.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7de1db42-79cf-48e2-865a-648b8233869e" name="Default Changelist" comment="" />
+      <created>1604284620898</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604284620898</updated>
+      <workItem from="1604284623969" duration="759000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
