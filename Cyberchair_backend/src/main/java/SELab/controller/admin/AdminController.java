@@ -1,7 +1,8 @@
 package SELab.controller.admin;
 
 import SELab.request.admin.ApplicationRatifyRequest;
-import SELab.service.Service;
+
+import SELab.utility.contract.portStore;
 import SELab.utility.response.ResponseWrapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,31 +13,35 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 @RestController
 public class AdminController {
 
     Logger logger = LoggerFactory.getLogger(AdminController.class);
-    private Service service;
-    @Autowired
-    public AdminController(Service service){this.service = service;}
 
 
     @GetMapping("/admin/queueingApplication")
-    public ResponseEntity<?> getqueueingApplication() {
+    public void getqueueingApplication(HttpServletRequest request , HttpServletResponse response) throws Exception{
         logger.debug("Get queuing applications by admin");
-        return ResponseEntity.ok(service.getqueueingApplication());
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.MeetingService+"/admin/queueingApplication");
+        requestDispatcher.forward(request, response);
     }
 
     @GetMapping("/admin/alreadyApplication")
-    public ResponseEntity<?> getalreadyApplication() {
+    public void getalreadyApplication(HttpServletRequest request , HttpServletResponse response) throws Exception {
         logger.debug("Get dealed applications by admin");
-        return ResponseEntity.ok(service.getalreadyApplication());
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.MeetingService+"/admin/alreadyApplication");
+        requestDispatcher.forward(request, response);
     }
 
     @PostMapping("/admin/ratify")
-    public ResponseEntity<?> applicationRatify(@RequestBody ApplicationRatifyRequest request) {
-        logger.debug("Ratification for Meeting named "+ request.getMeetingName());
-        return ResponseEntity.ok(service.applicationRatify(request));
+    public void applicationRatify(HttpServletRequest request , HttpServletResponse response)  throws Exception{
+        logger.debug("Ratification for Meeting named ");
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.MeetingService+"//admin/ratify");
+        requestDispatcher.forward(request, response);
     }
 
 

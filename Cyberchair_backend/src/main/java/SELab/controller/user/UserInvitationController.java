@@ -1,48 +1,48 @@
 package SELab.controller.user;
 
-import SELab.request.user.InvitationRepoRequest;
-import SELab.service.Service;
+
+
+import SELab.utility.contract.portStore;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @RestController
 public class UserInvitationController {
     Logger logger = LoggerFactory.getLogger(UserInvitationController.class);
-    private Service service;
-
-    @Autowired
-    UserInvitationController(Service service){
-        this.service = service;
-    }
 
     @GetMapping("/user/undealedNotifications")
-    public ResponseEntity<?> undealedNotifications(String username){
-        logger.debug("Get undealedNotifications info : "+username);
-        return ResponseEntity.ok(service.undealedNotifications(username));
+    public void undealedNotifications(HttpServletRequest request , HttpServletResponse response) throws Exception{
+        logger.debug("Get undealedNotifications info : ");
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.MeetingService+"/user/undealedNotifications");
+        requestDispatcher.forward(request, response);
     }
 
     @PostMapping("/user/invitationRepo")
-    public ResponseEntity<?> invitationRepo(@RequestBody InvitationRepoRequest request){
+    public void invitationRepo(HttpServletRequest request , HttpServletResponse response) throws Exception{
         logger.debug("Post invitationRepo info : "+request.toString());
-        return ResponseEntity.ok(service.invitationRepo(request));
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.MeetingService+"/user/invitationRepo");
+        requestDispatcher.forward(request, response);
     }
 
     @GetMapping("/user/undealedNotificationsNum")
-    public ResponseEntity<?> undealedNotificationsNum(String username){
-        logger.debug("Get undealedNotificationsNum info : "+username);
-        return  ResponseEntity.ok(service.undealedNotificationsNum(username));
+    public void undealedNotificationsNum(HttpServletRequest request , HttpServletResponse response) throws Exception{
+        logger.debug("Get undealedNotificationsNum info : ");
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.MeetingService+"/user/undealedNotificationsNum");
+        requestDispatcher.forward(request, response);
     }
 
     @GetMapping("/user/alreadyDealedNotifications")
-    public ResponseEntity<?> alreadyDealedNotifications(String username){
-        logger.debug("Get alreadyDealedNotifications info : "+username);
-        return  ResponseEntity.ok(service.alreadyDealedNotifications(username));
+    public void alreadyDealedNotifications(HttpServletRequest request , HttpServletResponse response) throws Exception{
+        logger.debug("Get alreadyDealedNotifications info : ");
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.MeetingService+"/user/alreadyDealedNotifications");
+        requestDispatcher.forward(request, response);
     }
 
 }

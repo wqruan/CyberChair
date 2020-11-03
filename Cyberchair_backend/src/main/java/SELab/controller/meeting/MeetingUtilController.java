@@ -2,7 +2,7 @@ package SELab.controller.meeting;
 
 import SELab.request.meeting.MeetingApplicationRequest;
 import SELab.request.meeting.PCMemberInvitationRequest;
-import SELab.service.Service;
+import SELab.utility.contract.portStore;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,43 +12,48 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 @RestController
 public class MeetingUtilController {
     Logger logger = LoggerFactory.getLogger(MeetingUtilController.class);
 
-    private Service service;
-
-    @Autowired
-    public MeetingUtilController(Service service) { this.service = service; }
 
     @PostMapping("/meeting/application")
-    public ResponseEntity<?> meetingApplication(@RequestBody MeetingApplicationRequest request) {
+    public void meetingApplication(HttpServletRequest request , HttpServletResponse response) throws Exception{
         logger.debug("Meeting application: " + request.toString());
-        return ResponseEntity.ok(service.meetingApplication(request));
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.MeetingService+"/meeting/application");
+        requestDispatcher.forward(request, response);
     }
 
     @GetMapping("/meeting/meetingInfo")
-    public ResponseEntity<?> getmeetingInfo(String meetingName) {
-        logger.debug("Meeting Information: " + meetingName);
-        return ResponseEntity.ok(service.getmeetingInfo(meetingName));
+    public void getmeetingInfo(HttpServletRequest request , HttpServletResponse response) throws Exception {
+        logger.debug("Meeting Information: " );
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.MeetingService+"/meeting/meetingInfo");
+        requestDispatcher.forward(request, response);
     }
 
     @PostMapping("/meeting/pcmInvitation")
-    public ResponseEntity<?> pcmInvitation(@RequestBody PCMemberInvitationRequest request) {
+    public void pcmInvitation(HttpServletRequest request , HttpServletResponse response) throws Exception {
         logger.debug("PCMember Invitation: " + request.toString());
-        return ResponseEntity.ok(service.pcmInvitation(request));
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.MeetingService+"/meeting/pcmInvitation");
+        requestDispatcher.forward(request, response);
     }
 
     @GetMapping("/meeting/invitationStatus")
-    public ResponseEntity<?> getInvitationStatus(String meetingName) {
-        logger.debug("Invitation Status: " + meetingName);
-        return ResponseEntity.ok(service.getInvitationStatus(meetingName));
+    public void getInvitationStatus(HttpServletRequest request , HttpServletResponse response) throws Exception {
+        logger.debug("Invitation Status: ");
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.MeetingService+"/meeting/invitationStatus");
+        requestDispatcher.forward(request, response);
     }
 
     @GetMapping("/meeting/submissionList")
-    public ResponseEntity<?> getSubmissionList(String authorName,String meetingName) {
+    public void getSubmissionList(HttpServletRequest request , HttpServletResponse response) throws Exception {
         logger.debug("Submission List");
-        return ResponseEntity.ok(service.getSubmissionList(authorName,meetingName));
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.MeetingService+"/meeting/submissionList");
+        requestDispatcher.forward(request, response);
     }
 
 }

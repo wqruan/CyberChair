@@ -1,48 +1,45 @@
 package SELab.controller.user;
 
-import SELab.controller.util.UtilController;
-import SELab.service.Service;
+
+import SELab.utility.contract.portStore;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @RestController
 public class UserMeetingController {
 
     Logger logger = LoggerFactory.getLogger(UserMeetingController.class);
-    private Service service;
-
-    @Autowired
-    UserMeetingController(Service service){
-        this.service = service;
-    }
 
     @GetMapping("/user/chairMeeting")
-    public ResponseEntity<?> chairMeeting(String username){
-        logger.debug("Get chair meeting info: "+username);
-        return ResponseEntity.ok(service.chairMeeting(username));
+    public void chairMeeting(HttpServletRequest request , HttpServletResponse response) throws Exception{
+        logger.debug("Get chair meeting info: ");
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.MeetingService+"/user/chairMeeting");
+        requestDispatcher.forward(request, response);
     }
 
     @GetMapping("/user/pcMemberMeeting")
-    public ResponseEntity<?> pcMemberMeeting(String username){
-        logger.debug("Get pcMemberMeeting info : "+username);
-        return  ResponseEntity.ok(service.pcMemberMeeting(username));
+    public void pcMemberMeeting(HttpServletRequest request , HttpServletResponse response) throws Exception{
+        logger.debug("Get pcMemberMeeting info : ");
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.MeetingService+"/user/pcMemberMeeting");
+        requestDispatcher.forward(request, response);
     }
 
     @GetMapping("/user/authorMeeting")
-    public ResponseEntity<?> authorMeeting(String username){
-        logger.debug("Get author meeting info : "+username);
-        return  ResponseEntity.ok(service.authorMeeting(username));
+    public void authorMeeting(HttpServletRequest request , HttpServletResponse response) throws Exception{
+        logger.debug("Get author meeting info : ");
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.MeetingService+"/user/authorMeeting");
+        requestDispatcher.forward(request, response);
     }
 
     @GetMapping("/user/availableMeeting")
-    public ResponseEntity<?> availableMeeting(String username){
-        logger.debug("Get available meeting info : "+username);
-        return  ResponseEntity.ok(service.availableMeeting(username));
+    public void availableMeeting(HttpServletRequest request , HttpServletResponse response) throws Exception{
+        logger.debug("Get available meeting info : ");
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.MeetingService+"/user/availableMeeting");
+        requestDispatcher.forward(request, response);
     }
 }

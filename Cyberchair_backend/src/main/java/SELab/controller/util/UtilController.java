@@ -1,26 +1,21 @@
 package SELab.controller.util;
 
-import SELab.request.util.LoginRequest;
-import SELab.request.util.RegisterRequest;
-import SELab.service.Service;
+
+import SELab.utility.contract.portStore;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
 
 @RestController
 public class UtilController {
-
     Logger logger = LoggerFactory.getLogger(UtilController.class);
-    private Service service;
-
-    @Autowired
-    public UtilController(Service service) { this.service = service;}
-
     @GetMapping("/welcome")
     public ResponseEntity<?> welcome() {
         Map<String, String> response = new HashMap<>();
@@ -30,35 +25,39 @@ public class UtilController {
     }
 
     @PostMapping("/register")
-    public ResponseEntity<?> register(@RequestBody RegisterRequest request) {
+    public void register(HttpServletRequest request , HttpServletResponse response) throws Exception {
         logger.debug("RegistrationForm: " + request.toString());
-
-        return ResponseEntity.ok(service.register(request));
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.UserService+"/register");
+        requestDispatcher.forward(request, response);
     }
 
     @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody LoginRequest request) {
+    public void login(HttpServletRequest request , HttpServletResponse response) throws Exception {
         logger.debug("LoginForm: " + request.toString());
         logger.info(request.toString());
-        return ResponseEntity.ok(service.login(request));
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.UserService+"/login");
+        requestDispatcher.forward(request, response);
     }
 
     @GetMapping("/user/userinfo")
-    public ResponseEntity<?> getUserinfo(String username) {
-        logger.debug("Get user info: " + username);
-        return ResponseEntity.ok(service.getUserinfo(username));
+    public void getUserinfo(HttpServletRequest request , HttpServletResponse response) throws Exception {
+        logger.debug("Get user info: " );
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.UserService+"/user/userinfo");
+        requestDispatcher.forward(request, response);
     }
 
     @GetMapping("/util/users")
-    public ResponseEntity<?> searchUsersbyFullname(String fullname) {
-        logger.debug("Users with fullname " + fullname + " : ");
-        return ResponseEntity.ok(service.searchUsersbyFullname(fullname));
+    public void searchUsersbyFullname(HttpServletRequest request , HttpServletResponse response) throws Exception {
+        logger.debug("Users with fullname " );
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.UserService+"/util/users");
+        requestDispatcher.forward(request, response);
     }
 
     @GetMapping("/utils/pdf")
     @ResponseBody
-    public byte[] getImage(String pdfUrl)  {
-        logger.debug("Get file for pdfUrl " + pdfUrl + " : ");
-        return service.getPdfContent(pdfUrl);
+    public void getImage(HttpServletRequest request , HttpServletResponse response) throws Exception  {
+        logger.debug("Get file for pdfUrl " );
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.UserService+"/utils/pdf");
+        requestDispatcher.forward(request, response);
     }
 }

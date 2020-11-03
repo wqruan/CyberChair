@@ -1,7 +1,7 @@
 package SELab.controller.meeting;
 
 import SELab.request.meeting.*;
-import SELab.service.Service;
+import SELab.utility.contract.portStore;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,54 +11,61 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 @RestController
 public class MeetingReviewController {
     Logger logger = LoggerFactory.getLogger(MeetingArticleController.class);
 
-    private Service service;
-
-    @Autowired
-    public MeetingReviewController(Service service) { this.service = service; }
 
     @PostMapping("/meeting/reviewPost")
-    public ResponseEntity<?> reviewPost(@RequestBody ReviewPostRequest request) {
+    public void reviewPost(HttpServletRequest request , HttpServletResponse response) throws Exception {
         logger.debug("Review post: " + request.toString());
-        return ResponseEntity.ok(service.reviewPost(request));
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.Article+"/meeting/reviewPost");
+        requestDispatcher.forward(request, response);
     }
 
     @GetMapping("/meeting/postList")
-    public ResponseEntity<?> getPostList(String articleId,String postStatus) {
-        logger.debug("Get postList article: ID " + articleId +" Post Status: " + postStatus);
-        return ResponseEntity.ok(service.getPostList(articleId,postStatus));
+    public void getPostList(HttpServletRequest request , HttpServletResponse response) throws Exception {
+        logger.debug("Get postList article: ID " );
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.Article+"/meeting/postList");
+        requestDispatcher.forward(request, response);
     }
 
     @PostMapping("/meeting/updateReview")
-    public ResponseEntity<?> updateReview(@RequestBody UpdateReviewRequest request) {
+    public void updateReview(HttpServletRequest request , HttpServletResponse response) throws Exception {
         logger.debug("update Review: " + request.toString());
-        return ResponseEntity.ok(service.updateReview(request));
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.Article+"/meeting/updateReview");
+        requestDispatcher.forward(request, response);
     }
 
     @PostMapping("/meeting/reviewConfirm")
-    public ResponseEntity<?> reviewConfirm(@RequestBody ReviewConfirmRequest request) {
+    public void reviewConfirm(HttpServletRequest request , HttpServletResponse response) throws Exception {
         logger.debug("Review Confirm: " + request.toString());
-        return ResponseEntity.ok(service.reviewConfirm(request));
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.Article+"/meeting/reviewConfirm");
+        requestDispatcher.forward(request, response);
     }
 
     @PostMapping("/meeting/rebuttal")
-    public ResponseEntity<?> rebuttal(@RequestBody RebuttalRequest request) {
+    public void rebuttal(HttpServletRequest request , HttpServletResponse response) throws Exception {
         logger.debug("Rebuttal: " + request.toString());
-        return ResponseEntity.ok(service.rebuttal(request));
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.Article+"/meeting/rebuttal");
+        requestDispatcher.forward(request, response);
     }
 
     @GetMapping("/meeting/rebuttalInfo")
-    public ResponseEntity<?> getRebuttalInfo(String articleId) {
-        logger.debug("Get Rebuttal Info for article: ID " + articleId);
-        return ResponseEntity.ok(service.getRebuttalInfo(articleId));
+    public void getRebuttalInfo(HttpServletRequest request , HttpServletResponse response) throws Exception {
+        logger.debug("Get Rebuttal Info for article: ID " );
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.Article+"/meeting/reviewInfo");
+        requestDispatcher.forward(request, response);
     }
 
     @PostMapping("/meeting/finalPublish")
-    public ResponseEntity<?> finalPublish(@RequestBody FinalPublishRequest request) {
+    public void finalPublish(HttpServletRequest request , HttpServletResponse response) throws Exception {
         logger.debug("Final Publish: " + request.toString());
-        return ResponseEntity.ok(service.finalPublish(request));
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("http://localhost:"+ portStore.Article+"/meeting/finalPublish");
+        requestDispatcher.forward(request, response);
     }
 }
