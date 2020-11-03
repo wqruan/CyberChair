@@ -129,6 +129,18 @@ public class UtilService {
         body.put("UserInformation",response);
         return new ResponseWrapper<>(200, ResponseGenerator.success, body);
     }
+    public ResponseWrapper<?> getUserinfoByID(int userID){
+        User user = userRepository.findById(userID);
+        if (user == null) {
+            throw new UserNamedidntExistException("id wrong");
+        }//邀请对象是否存在
+        HashMap<String, HashMap<String, Object>> body = new HashMap<>();
+        HashMap<String, Object> response = ResponseGenerator.generate(user,
+                new String[]{"username","fullname","email","institution","region"}, null);
+
+        body.put("UserInformation",response);
+        return new ResponseWrapper<>(200, ResponseGenerator.success, body);
+    }
 
     public ResponseWrapper<?> searchUsersbyFullname(String fullname){
         Streamable<User> users = userRepository.findByFullnameContains(fullname);

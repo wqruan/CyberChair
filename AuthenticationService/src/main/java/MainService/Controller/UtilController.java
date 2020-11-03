@@ -51,6 +51,11 @@ public class UtilController {
         logger.debug("Get user info: " + username);
         return ResponseEntity.ok(service.getUserinfo(username));
     }
+    @GetMapping("/user/userinfoByID")
+    public ResponseEntity<?> getUserinfoByID(int userID) {
+        logger.info("Get user info: " + userID);
+        return ResponseEntity.ok(service.getUserinfoByID(userID));
+    }
 
     @GetMapping("/util/users")
     public ResponseEntity<?> searchUsersbyFullname(String fullname) {

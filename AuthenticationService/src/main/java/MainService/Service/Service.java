@@ -62,7 +62,13 @@ public class Service {
         }
         return  ret;
     }
-
+    public ResponseWrapper<?> getUserinfoByID(int userID){
+        ResponseWrapper<?> ret = utilService.getUserinfoByID(userID);
+        if(ret.getResponseMessage().equals(ResponseGenerator.success)){
+            logger.debug("Information of User with ID "+ userID + fetched);
+        }
+        return  ret;
+    }
     public ResponseWrapper<?> searchUsersbyFullname(String fullname) {
         ResponseWrapper<?> ret = utilService.searchUsersbyFullname(fullname);
         if(ret.getResponseMessage().equals(ResponseGenerator.success)){

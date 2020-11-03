@@ -2,11 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7de1db42-79cf-48e2-865a-648b8233869e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/SELab/domain/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SELab/domain/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SELab/domain/PostMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SELab/domain/PostMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SELab/domain/Rebuttal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SELab/domain/Rebuttal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SELab/domain/ReviewRelation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SELab/domain/ReviewRelation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SELab/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SELab/domain/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Article-Service/src/test/java/testFindbyUserID.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/src/main/java/MainService/Service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/src/main/java/MainService/Service/ArticleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Service/ArticleService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Service/ArticleService$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Service/ArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Service/ArticleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/Controller/UtilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/Controller/UtilController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/Service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/Service/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/Service/UtilService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/Service/UtilService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Controller/UtilController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Controller/UtilController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Service/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Service/Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Service/UtilService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Service/UtilService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/security/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/domain/Article.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/domain/Author.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/domain/ChairRelation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/domain/Meeting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/domain/PCMemberRelation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/domain/PostMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/domain/Rebuttal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/domain/ReviewRelation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/security/jwt/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/repository/ArticleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/repository/ChairRelationRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/repository/MeetingRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/repository/PCMemberRelationRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/repository/PostRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/repository/RebuttalRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/repository/ReviewRelationRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/request/admin/ApplicationRatifyRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/request/meeting/BeginReviewRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/request/meeting/BeginSubmissionRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/request/meeting/FinalPublishRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/request/meeting/MeetingApplicationRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/request/meeting/PCMemberInvitationRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/request/meeting/RebuttalRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/request/meeting/ResultPublishRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/request/meeting/ReviewConfirmRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/request/meeting/ReviewPostRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/request/meeting/ReviewRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/request/meeting/UpdateReviewRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/request/user/ArticleDetailRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/request/user/ArticleRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/request/user/InvitationRepoRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/request/util/LoginRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/request/util/RegisterRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/security/jwt/JwtUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/security/jwt/JwtUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SELab/remote/RemoteUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SELab/remote/RemoteUser.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +68,11 @@
   <component name="ProjectId" id="1jiQqEd5tStFlzkjI54qYXVArWd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -46,6 +95,10 @@
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="lab2" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="SELab.Application" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <envs>
+        <env name="server.port" value="9090" />
+      </envs>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -61,7 +114,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604284620898</updated>
-      <workItem from="1604284623969" duration="2405000" />
+      <workItem from="1604284623969" duration="5564000" />
     </task>
     <servers />
   </component>

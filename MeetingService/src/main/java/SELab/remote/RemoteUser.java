@@ -25,7 +25,14 @@ public class RemoteUser {
         return user;
     }
     public static User findById(long id){
-        return new User();
+        RestTemplate restTemplate = new RestTemplate();
+        ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://localhost:8080/user/userinfoByID?userID="+id,String.class);
+        JSONObject tmp =JSON.parseObject(responseEntity.getBody());
+        JSONObject userInfo = (JSONObject) tmp.get("responseBody");
+        userInfo = (JSONObject) userInfo.get("UserInformation");
+
+        User user = new User((String) userInfo.get("username"),userInfo.getString("fullname"),"",userInfo.getString("email"),userInfo.getString("institution"),userInfo.getString("region"));
+        return user;
     }
     public static User findByEmail(String email){
         return new User();
