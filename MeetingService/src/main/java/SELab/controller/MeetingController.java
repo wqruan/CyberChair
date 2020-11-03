@@ -31,6 +31,12 @@ public class MeetingController {
         return ResponseEntity.ok(service.getmeetingInfo(meetingName));
     }
 
+    @GetMapping("/meeting/meetingInfoById")
+    public ResponseEntity<?> getmeetingInfoByID(long meetingID) {
+        logger.info("Meeting Information By Id: " + meetingID);
+        return ResponseEntity.ok(service.getmeetingInfoByID(meetingID));
+    }
+
     @PostMapping("/meeting/pcmInvitation")
     public ResponseEntity<?> pcmInvitation(@RequestBody PCMemberInvitationRequest request) {
         logger.debug("PCMember Invitation: " + request.toString());

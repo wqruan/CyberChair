@@ -73,6 +73,16 @@ public class MeetingService {
         return ResponseGenerator.injectObjectFromObjectToResponse("meetingInfo",meeting,new String[]{"chairName","meetingName","acronym","region","city","venue","topic","organizer","webPage","submissionDeadlineDate","notificationOfAcceptanceDate","conferenceDate","status"}, null);
     }
 
+    @Transactional
+    public ResponseWrapper<?> getmeetingInfoByID(long meetingID){
+        Meeting meeting = meetingRepository.findById(meetingID);
+        if (meeting == null) {
+            throw new MeetingOfNoExistenceException(String.valueOf(meetingID));
+        }
+
+        return ResponseGenerator.injectObjectFromObjectToResponse("meetingInfo",meeting,new String[]{"chairName","meetingName","acronym","region","city","venue","topic","organizer","webPage","submissionDeadlineDate","notificationOfAcceptanceDate","conferenceDate","status"}, null);
+    }
+
     public ResponseWrapper<?> pcmInvitation(PCMemberInvitationRequest request){
         String meetingName = request.getMeetingName();
         Meeting meeting = meetingRepository.findByMeetingName(meetingName);

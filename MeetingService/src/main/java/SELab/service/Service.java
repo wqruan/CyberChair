@@ -57,6 +57,14 @@ public class Service {
         return  ret;
     }
 
+    public ResponseWrapper<?> getmeetingInfoByID(long meetingID) {
+        ResponseWrapper<?> ret = meetingService.getmeetingInfoByID(meetingID);
+        if(ret.getResponseMessage().equals(ResponseGenerator.success)){
+            logger.debug("Information of Meeting with ID "+ meetingID +fetched);
+        }
+        return  ret;
+    }
+
     public ResponseWrapper<?> pcmInvitation(PCMemberInvitationRequest request) {
         ResponseWrapper<?> ret = meetingService.pcmInvitation(request);
         if(ret.getResponseMessage().equals(ResponseGenerator.success)){

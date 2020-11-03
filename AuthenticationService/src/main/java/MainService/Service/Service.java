@@ -69,6 +69,23 @@ public class Service {
         }
         return  ret;
     }
+
+    public ResponseWrapper<?> getUserinfoByEmail(String email){
+        ResponseWrapper<?> ret = utilService.getUserinfoByEmail(email);
+        if(ret.getResponseMessage().equals(ResponseGenerator.success)){
+            logger.debug("Information of User with email "+ email + fetched);
+        }
+        return  ret;
+    }
+    public ResponseWrapper<?> getUserinfoByFullnameAndEmail(String fullname,String email){
+        ResponseWrapper<?> ret = utilService.getUserinfoByFullnameAndEmail(fullname, email);
+        if(ret.getResponseMessage().equals(ResponseGenerator.success)){
+            logger.debug("Information of User with fullname and email " + fullname + ", " + email + fetched);
+        }
+        return  ret;
+    }
+
+
     public ResponseWrapper<?> searchUsersbyFullname(String fullname) {
         ResponseWrapper<?> ret = utilService.searchUsersbyFullname(fullname);
         if(ret.getResponseMessage().equals(ResponseGenerator.success)){

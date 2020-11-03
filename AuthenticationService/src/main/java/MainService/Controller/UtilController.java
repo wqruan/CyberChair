@@ -51,10 +51,23 @@ public class UtilController {
         logger.debug("Get user info: " + username);
         return ResponseEntity.ok(service.getUserinfo(username));
     }
+
     @GetMapping("/user/userinfoByID")
     public ResponseEntity<?> getUserinfoByID(int userID) {
         logger.info("Get user info: " + userID);
         return ResponseEntity.ok(service.getUserinfoByID(userID));
+    }
+
+    @GetMapping("/user/userinfoByEmail")
+    public ResponseEntity<?> getUserinfoByEmail(String email) {
+        logger.info("Get user info by email: " + email);
+        return ResponseEntity.ok(service.getUserinfoByEmail(email));
+    }
+
+    @GetMapping("/user/userinfoByFullnameAndEmail")
+    public ResponseEntity<?> getUserinfoByFullnameAndEmail(String fullname,String email) {
+        logger.info("Get user info by fullName and email: " + fullname + ", " + email);
+        return ResponseEntity.ok(service.getUserinfoByFullnameAndEmail(fullname, email));
     }
 
     @GetMapping("/util/users")

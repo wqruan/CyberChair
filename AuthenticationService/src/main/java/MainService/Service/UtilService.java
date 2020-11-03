@@ -142,6 +142,34 @@ public class UtilService {
         return new ResponseWrapper<>(200, ResponseGenerator.success, body);
     }
 
+
+    public ResponseWrapper<?> getUserinfoByEmail(String email){
+        User user = userRepository.findByEmail(email);
+        if (user == null) {
+            throw new UserNamedidntExistException("email wrong");
+        }//邀请对象是否存在
+        HashMap<String, HashMap<String, Object>> body = new HashMap<>();
+        HashMap<String, Object> response = ResponseGenerator.generate(user,
+                new String[]{"username","fullname","email","institution","region"}, null);
+
+        body.put("UserInformation",response);
+        return new ResponseWrapper<>(200, ResponseGenerator.success, body);
+    }
+
+    public ResponseWrapper<?> getUserinfoByFullnameAndEmail(String fullname,String email){
+        User user = userRepository.findByFullnameAndEmail(fullname, email);
+        if (user == null) {
+            throw new UserNamedidntExistException("fullname or email wrong");
+        }//邀请对象是否存在
+        HashMap<String, HashMap<String, Object>> body = new HashMap<>();
+        HashMap<String, Object> response = ResponseGenerator.generate(user,
+                new String[]{"username","fullname","email","institution","region"}, null);
+
+        body.put("UserInformation",response);
+        return new ResponseWrapper<>(200, ResponseGenerator.success, body);
+    }
+
+
     public ResponseWrapper<?> searchUsersbyFullname(String fullname){
         Streamable<User> users = userRepository.findByFullnameContains(fullname);
         HashMap<String, Set<HashMap<String, Object>>> body = new HashMap<>();

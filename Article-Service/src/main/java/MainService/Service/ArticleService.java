@@ -16,6 +16,7 @@ import MainService.repository.ReviewRelationRepository;
 import MainService.util.response.ResponseGenerator;
 import MainService.util.response.ResponseWrapper;
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import javafx.util.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -499,10 +500,65 @@ public class ArticleService {
     }
     }
     public Meeting findByID(long id){
-        return null;
+        RestTemplate restTemplate = new RestTemplate();
+        ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://localhost:8080/meeting/meetingInfoById?meetingID="+id,String.class);
+
+        JSONObject tmp =JSON.parseObject(responseEntity.getBody());
+        JSONObject meetingInfo = (JSONObject) tmp.get("responseBody");
+        meetingInfo = (JSONObject) meetingInfo.get("meetingInfo");
+
+        Set<String> topicSet = new HashSet<>();
+        JSONArray parseArray = JSON.parseArray(meetingInfo.getString("topic"));
+        for(Object t: parseArray){
+            topicSet.add((String)t);
+        }
+
+        Meeting meeting = new Meeting((String) meetingInfo.get("chairName"),
+                meetingInfo.getString("meetingName"),
+                meetingInfo.getString("acronym"),
+                meetingInfo.getString("region"),
+                meetingInfo.getString("city"),
+                meetingInfo.getString("venue"),
+                topicSet,
+                meetingInfo.getString("organizer"),
+                meetingInfo.getString("webPage"),
+                meetingInfo.getString("submissionDeadlineDate"),
+                meetingInfo.getString("notificationOfAcceptanceDate"),
+                meetingInfo.getString("conferenceDate"),
+                meetingInfo.getString("status")
+        );
+        return meeting;
     }
+
     public Meeting findByMeetingName(String name){
-        return null;
+        RestTemplate restTemplate = new RestTemplate();
+        ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://localhost:8080/meeting/meetingInfo?meetingName="+name,String.class);
+
+        JSONObject tmp =JSON.parseObject(responseEntity.getBody());
+        JSONObject meetingInfo = (JSONObject) tmp.get("responseBody");
+        meetingInfo = (JSONObject) meetingInfo.get("meetingInfo");
+
+        Set<String> topicSet = new HashSet<>();
+        JSONArray parseArray = JSON.parseArray(meetingInfo.getString("topic"));
+        for(Object t: parseArray){
+            topicSet.add((String)t);
+        }
+
+        Meeting meeting = new Meeting((String) meetingInfo.get("chairName"),
+                meetingInfo.getString("meetingName"),
+                meetingInfo.getString("acronym"),
+                meetingInfo.getString("region"),
+                meetingInfo.getString("city"),
+                meetingInfo.getString("venue"),
+                topicSet,
+                meetingInfo.getString("organizer"),
+                meetingInfo.getString("webPage"),
+                meetingInfo.getString("submissionDeadlineDate"),
+                meetingInfo.getString("notificationOfAcceptanceDate"),
+                meetingInfo.getString("conferenceDate"),
+                meetingInfo.getString("status")
+        );
+        return meeting;
     }
     //todo sent signal to meeting service to set the status of the meeting as rebuttal finish
     private void setMeetingStatus(String status){

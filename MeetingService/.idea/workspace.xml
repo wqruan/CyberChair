@@ -5,16 +5,108 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7de1db42-79cf-48e2-865a-648b8233869e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Article-Service/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Article-Service/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Article-Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AuthenticationService/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AuthenticationService/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AuthenticationService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/Article-Service.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/src/main/java/MainService/Service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/src/main/java/MainService/Service/ArticleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Controller/ArticleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Service/ArticleService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Service/ArticleService$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Service/ArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Service/ArticleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Service/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Service/Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/domain/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/domain/Article.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/domain/Author.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/domain/Author.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/domain/Meeting.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/domain/Meeting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/domain/PostMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/domain/PostMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/domain/Rebuttal.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/domain/Rebuttal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/domain/ReviewRelation.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/domain/ReviewRelation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/domain/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/AuthenticationFailedException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/AuthenticationFailedException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/ControllerAdvisor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/ControllerAdvisor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/EmailHasBeenRegisteredException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/EmailHasBeenRegisteredException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/FullNameillegalException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/FullNameillegalException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/InternalServerError.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/InternalServerError.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/InvitationTargetIsForbiddenException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/InvitationTargetIsForbiddenException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/MeetingNameHasbeenregisteredException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/MeetingNameHasbeenregisteredException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/MeetingOfNoExistenceException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/MeetingOfNoExistenceException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/MeetingStatusUnavailableForPCMemberInvitationException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/MeetingStatusUnavailableForPCMemberInvitationException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/MeetingUnavaliableToOperateException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/MeetingUnavaliableToOperateException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/NoneArticleToReviewException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/NoneArticleToReviewException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/RejectToReviewException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/RejectToReviewException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/UserNamedidntExistException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/UserNamedidntExistException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/UsernameHasBeenRegisteredException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/UsernameHasBeenRegisteredException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/user/ArticleNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/exception/user/ArticleNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/repository/ArticleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/repository/ArticleRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/repository/PostRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/repository/PostRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/repository/RebuttalRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/repository/RebuttalRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/repository/ReviewRelationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/repository/ReviewRelationRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/admin/ApplicationRatifyRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/admin/ApplicationRatifyRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/meeting/BeginReviewRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/meeting/BeginReviewRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/meeting/BeginSubmissionRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/meeting/BeginSubmissionRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/meeting/FinalPublishRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/meeting/FinalPublishRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/meeting/MeetingApplicationRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/meeting/MeetingApplicationRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/meeting/PCMemberInvitationRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/meeting/PCMemberInvitationRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/meeting/RebuttalRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/meeting/RebuttalRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/meeting/ResultPublishRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/meeting/ResultPublishRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/meeting/ReviewConfirmRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/meeting/ReviewConfirmRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/meeting/ReviewPostRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/meeting/ReviewPostRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/meeting/ReviewRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/meeting/ReviewRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/meeting/UpdateReviewRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/meeting/UpdateReviewRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/user/ArticleDetailRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/user/ArticleDetailRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/user/ArticleRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/user/ArticleRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/user/InvitationRepoRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/user/InvitationRepoRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/util/LoginRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/util/LoginRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/util/RegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/request/util/RegisterRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/util/response/ResponseGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/util/response/ResponseGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/util/response/ResponseWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/util/response/ResponseWrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/Controller/UtilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/Controller/UtilController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/Service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/Service/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/Service/UtilService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/Service/UtilService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/META-INF/Authentication-Service.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Application$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Application$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Controller/UtilController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Controller/UtilController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Request/LoginRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Request/LoginRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Request/RegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Request/RegisterRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Service/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Service/Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Service/UtilService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Service/UtilService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/config/CorsConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/config/CorsConfig$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/domain/Author.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/domain/Meeting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/domain/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/AuthenticationFailedException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/AuthenticationFailedException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/ControllerAdvisor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/ControllerAdvisor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/EmailHasBeenRegisteredException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/EmailHasBeenRegisteredException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/FullNameillegalException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/FullNameillegalException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/InternalServerError.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/InternalServerError.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/InvitationTargetIsForbiddenException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/InvitationTargetIsForbiddenException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/MeetingNameHasbeenregisteredException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/MeetingNameHasbeenregisteredException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/MeetingOfNoExistenceException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/MeetingOfNoExistenceException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/MeetingStatusUnavailableForPCMemberInvitationException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/MeetingStatusUnavailableForPCMemberInvitationException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/MeetingUnavaliableToOperateException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/MeetingUnavaliableToOperateException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/NoneArticleToReviewException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/NoneArticleToReviewException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/RejectToReviewException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/RejectToReviewException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/UserNamedidntExistException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/UserNamedidntExistException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/UsernameHasBeenRegisteredException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/UsernameHasBeenRegisteredException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/user/ArticleNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/exception/user/ArticleNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/response/ResponseGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/response/ResponseGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/response/ResponseWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/response/ResponseWrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/respository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/respository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/security/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/security/jwt/JwtConfigProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/security/jwt/JwtConfigProperties.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/security/jwt/JwtRequestFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/security/jwt/JwtRequestFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/security/jwt/JwtTokenUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/security/jwt/JwtTokenUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/security/jwt/JwtUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/security/jwt/JwtUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/security/jwt/JwtUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/security/jwt/JwtUserDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/security/jwt/SampleManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/security/jwt/SampleManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SELab/controller/MeetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SELab/controller/MeetingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SELab/remote/RemoteUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SELab/remote/RemoteUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SELab/service/MeetingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SELab/service/MeetingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SELab/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SELab/service/Service.java" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,8 +116,128 @@
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/SELab/domain/Article.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-892">
+              <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+              <folding>
+                <element signature="e#2691#2692#0" expanded="true" />
+                <element signature="e#2720#2721#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/SELab/remote/RemoteReviewRelation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/SELab/remote/RemoteArticle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="9" column="30" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="30" />
+              <folding>
+                <element signature="e#212#213#0" expanded="true" />
+                <element signature="e#252#253#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/SELab/controller/MeetingController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1582">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/SELab/service/Service.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2992">
+              <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/SELab/service/MeetingService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="349" column="28" lean-forward="true" selection-start-line="349" selection-start-column="28" selection-end-line="349" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/SELab/remote/RemoteUser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="52" column="67" lean-forward="true" selection-start-line="52" selection-start-column="67" selection-end-line="52" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/SELab/domain/Meeting.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/SELab/domain/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/SELab/domain/ReviewRelation.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>getmeetingInfoByID</find>
+      <find>meetingId</find>
+      <find>findByFullnameAndEmail</find>
+      <find>findByEmail</find>
+      <find>RemoteUser</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/SELab/controller/MeetingController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SELab/service/MeetingService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SELab/service/Service.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SELab/remote/RemoteUser.java" />
+      </list>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -34,8 +246,113 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="822" />
+  </component>
   <component name="ProjectId" id="1jiQqEd5tStFlzkjI54qYXVArWd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MeetingService" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MeetingService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MeetingService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MeetingService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MeetingService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="SELab" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MeetingService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="SELab" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MeetingService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="SELab" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MeetingService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="SELab" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MeetingService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="SELab" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MeetingService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="SELab" type="462c0819:PsiDirectoryNode" />
+              <item name="remote" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MeetingService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="SELab" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -46,6 +363,7 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -91,11 +409,52 @@
       <updated>1604284620898</updated>
       <workItem from="1604284623969" duration="2405000" />
       <workItem from="1604386107531" duration="723000" />
+      <workItem from="1604430416884" duration="2062000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2062000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="822" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Designer" />
+      <window_info id="Image Layers" />
+      <window_info id="Capture Tool" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Spring" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.32876712" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32876712" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Bean Validation" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -103,11 +462,132 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/domain/PCMemberRelation.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/domain/ChairRelation.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/domain/PostMessage.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/domain/Rebuttal.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/domain/Author.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/domain/Meeting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/domain/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/controller/MeetingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1582">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/domain/ReviewRelation.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/domain/Article.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-892">
+          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding>
+            <element signature="e#2691#2692#0" expanded="true" />
+            <element signature="e#2720#2721#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/remote/RemoteArticle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="30" />
+          <folding>
+            <element signature="e#212#213#0" expanded="true" />
+            <element signature="e#252#253#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/remote/RemoteReviewRelation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/service/MeetingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="349" column="28" lean-forward="true" selection-start-line="349" selection-start-column="28" selection-end-line="349" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/service/Service.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2992">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/remote/RemoteUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="52" column="67" lean-forward="true" selection-start-line="52" selection-start-column="67" selection-end-line="52" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
