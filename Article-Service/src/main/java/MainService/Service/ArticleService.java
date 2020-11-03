@@ -15,8 +15,11 @@ import MainService.repository.ArticleRepository;
 import MainService.repository.ReviewRelationRepository;
 import MainService.util.response.ResponseGenerator;
 import MainService.util.response.ResponseWrapper;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import javafx.util.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
@@ -469,12 +472,17 @@ public class ArticleService {
             }
         }
     }
-    public User findByUsername(String username){
+    public static User findByUsername(String username){
         Map<String,String> map = new HashMap();
         map.put("username",username);
         RestTemplate restTemplate = new RestTemplate();
-        User user = restTemplate.getForObject("localhost:8081/user/userinfo"
-                , User.class,1,5);
+
+        ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://localhost:8080/user/userinfo?username="+username,String.class);
+        JSONObject tmp =JSON.parseObject(responseEntity.getBody());
+        JSONObject userInfo = (JSONObject) tmp.get("responseBody");
+        userInfo = (JSONObject) userInfo.get("UserInformation");
+
+        User user = new User((String) userInfo.get("username"),userInfo.getString("fullname"),"",userInfo.getString("email"),userInfo.getString("institution"),userInfo.getString("region"));
         return user;
     }
     public User findById(long id){
