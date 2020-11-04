@@ -1,6 +1,7 @@
 package MainService.Controller;
 
 import MainService.Service.Service;
+import MainService.domain.Article;
 import MainService.domain.Author;
 import MainService.request.meeting.*;
 import MainService.request.user.ArticleRequest;
@@ -162,4 +163,17 @@ public class ArticleController {
         logger.debug("Get postList article: ID " + articleId +" Post Status: " + postStatus);
         return ResponseEntity.ok(service.getPostList(articleId,postStatus));
     }
+
+    @GetMapping("/meeting/getArticlesByContributorName")
+    public List<Article> getArticlesByContributorName(String contributorName){
+        logger.debug("Get Articles by ContributorName: " + contributorName);
+        return service.getArticlesByContributorName(contributorName);
+    }
+
+    @GetMapping("/meeting/getArticlesByMeetingNameAndStatus")
+    public List<Article> getArticlesByMeetingNameAndStatus(String meetingName,String status){
+        logger.debug("Get Articles by meetingName and status: " + meetingName + ", " + status);
+        return service.getArticlesByMeetingNameAndStatus(meetingName, status);
+    }
+
 }

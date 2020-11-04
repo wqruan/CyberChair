@@ -560,6 +560,23 @@ public class ArticleService {
         );
         return meeting;
     }
+
+    public List<Article> getArticlesByContributorName(String contributorName) {
+        List<Article> articles = articleRepository.findByContributorName(contributorName);
+        if(articles == null)
+            throw new ArticleNotFoundException(contributorName);
+
+        return articles;
+    }
+
+    public List<Article> getArticlesByMeetingNameAndStatus(String meetingName,String status) {
+        List<Article> articles = articleRepository.findByMeetingNameAndStatus(meetingName, status);
+        if(articles == null)
+            throw new ArticleNotFoundException(meetingName + ", " + status);
+
+        return articles;
+    }
+
     //todo sent signal to meeting service to set the status of the meeting as rebuttal finish
     private void setMeetingStatus(String status){
 

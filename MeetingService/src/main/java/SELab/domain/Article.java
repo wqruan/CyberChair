@@ -1,9 +1,17 @@
 package SELab.domain;
 
 
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.DeserializationContext;
+import com.fasterxml.jackson.databind.JsonDeserializer;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import javafx.util.Pair;
 
 import javax.persistence.*;
+import java.io.IOException;
 import java.util.Set;
 
 
@@ -20,6 +28,7 @@ public class Article {
 
     private Set<String> topic;
 
+    @JsonDeserialize(contentUsing = MyPairDeserializer.class)
     private Set<Pair<Author,Integer>> authors;
 
     public Article() {}
@@ -126,5 +135,24 @@ public class Article {
 
     public void setAuthors(Set<Pair<Author, Integer>> authors) {
         this.authors = authors;
+    }
+}
+
+class MyPairDeserializer extends JsonDeserializer<Pair<Author, Integer>> {
+
+    public MyPairDeserializer() {
+    }
+
+    @Override
+    public Pair<Author, Integer> deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException, JsonProcessingException {
+        JsonNode node = jsonParser.getCodec().readTree(jsonParser);
+        ObjectMapper mapper = new ObjectMapper();
+
+//        System.out.println(node.get("key").toString());
+
+        Author author = mapper.readValue(node.get("key").toString(), Author.class);
+        int value = (Integer) (node.get("value")).numberValue();
+
+        return new Pair(author, value);
     }
 }

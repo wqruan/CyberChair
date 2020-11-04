@@ -8,6 +8,7 @@ import SELab.request.user.InvitationRepoRequest;
 import SELab.request.meeting.*;
 import SELab.utility.response.ResponseGenerator;
 import SELab.utility.response.ResponseWrapper;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -123,7 +124,7 @@ public class Service {
         return  ret;
     }
 
-    public ResponseWrapper<?> authorMeeting(String username){
+    public ResponseWrapper<?> authorMeeting(String username) throws JsonProcessingException {
         ResponseWrapper<?> ret = meetingService.authorMeeting(username);
         if (ret.getResponseMessage().equals(ResponseGenerator.success)){
             logger.debug("Meeting list "+ username + " role as author has been fetched.");
@@ -190,7 +191,7 @@ public class Service {
         return ret;
     }
     
-    public ResponseWrapper<?> beginReview(BeginReviewRequest request) {
+    public ResponseWrapper<?> beginReview(BeginReviewRequest request) throws JsonProcessingException {
         ResponseWrapper<?> ret = meetingService.beginReview(request);
         if(ret.getResponseMessage().equals(ResponseGenerator.success)){
             logger.info("Meeting named " + request.getMeetingName() + " review begin");

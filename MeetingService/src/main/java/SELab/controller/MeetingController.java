@@ -5,6 +5,7 @@ import SELab.request.admin.ApplicationRatifyRequest;
 import SELab.request.meeting.*;
 import SELab.request.user.InvitationRepoRequest;
 import SELab.service.Service;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
@@ -80,7 +81,7 @@ public class MeetingController {
     }
 
     @GetMapping("/user/authorMeeting")
-    public ResponseEntity<?> authorMeeting(String username){
+    public ResponseEntity<?> authorMeeting(String username) throws JsonProcessingException {
         logger.debug("Get author meeting info : "+username);
         return  ResponseEntity.ok(service.authorMeeting(username));
     }
@@ -122,7 +123,7 @@ public class MeetingController {
     }
 
     @PostMapping("/meeting/beginReview")
-    public ResponseEntity<?> beginReview(@RequestBody BeginReviewRequest request) {
+    public ResponseEntity<?> beginReview(@RequestBody BeginReviewRequest request) throws JsonProcessingException {
         logger.debug("Begin Review: " + request.toString());
         return ResponseEntity.ok(service.beginReview(request));
     }

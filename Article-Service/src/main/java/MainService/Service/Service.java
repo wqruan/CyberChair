@@ -1,5 +1,6 @@
 package MainService.Service;
 
+import MainService.domain.Article;
 import MainService.request.meeting.*;
 import MainService.request.user.ArticleRequest;
 import MainService.util.response.ResponseGenerator;
@@ -10,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author : wqruan
@@ -139,6 +141,22 @@ public class Service {
         ResponseWrapper<?> ret = articleService.reviewPost(request);
         if(ret.getResponseMessage().equals(ResponseGenerator.success)){
             logger.info("Review PostMessage: " + request.toString());
+        }
+        return ret;
+    }
+
+    public List<Article> getArticlesByContributorName(String contributorName) {
+        List<Article> ret = articleService.getArticlesByContributorName(contributorName);
+        if(ret != null){
+            logger.info("Got Articles by ContributorName: " + contributorName);
+        }
+        return ret;
+    }
+
+    public List<Article> getArticlesByMeetingNameAndStatus(String meetingName,String status) {
+        List<Article> ret = articleService.getArticlesByMeetingNameAndStatus(meetingName, status);
+        if(ret != null){
+            logger.info("Get Articles by meetingName and status: " + meetingName + ", " + status);
         }
         return ret;
     }

@@ -12,6 +12,7 @@ import SELab.request.user.InvitationRepoRequest;
 import SELab.utility.contract.*;
 import SELab.utility.response.ResponseGenerator;
 import SELab.utility.response.ResponseWrapper;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import javafx.util.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -210,7 +211,7 @@ public class MeetingService {
     }
 
     @Transactional
-    public ResponseWrapper<?> authorMeeting(String username){
+    public ResponseWrapper<?> authorMeeting(String username) throws JsonProcessingException {
         List<Article> articleList = RemoteArticle.findByContributorName(username);
         HashMap<String, Set<HashMap<String, Object>>> body = new HashMap<>();
         Set<HashMap<String, Object>> response = new HashSet<>();
@@ -267,7 +268,7 @@ public class MeetingService {
     }
 
     @Transactional
-    public ResponseWrapper<?> beginReview(BeginReviewRequest request) {
+    public ResponseWrapper<?> beginReview(BeginReviewRequest request) throws JsonProcessingException {
         String meetingName = request.getMeetingName();
         Meeting meeting = meetingRepository.findByMeetingName(meetingName);
         if (meeting == null) {
