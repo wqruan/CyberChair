@@ -65,6 +65,12 @@ public class MeetingService {
     }
 
     @Transactional
+    public Boolean saveMeeting(Meeting meeting){
+        meetingRepository.save(meeting);
+        return true;
+    }
+
+    @Transactional
     public ResponseWrapper<?> getmeetingInfo(String meetingName){
         Meeting meeting = meetingRepository.findByMeetingName(meetingName);
         if (meeting == null) {
@@ -519,9 +525,6 @@ public class MeetingService {
         meetingRepository.save(meeting);
         return new ResponseWrapper<>(200, ResponseGenerator.success, null);
     }
-
-
-
 
 }
 

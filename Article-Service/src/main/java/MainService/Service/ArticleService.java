@@ -20,6 +20,9 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import javafx.util.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -151,7 +154,8 @@ public class ArticleService {
 
     private ReviewRelation securityCheckForReview(String pcMemberName, String articleId){
         // TODO: 2020/10/28  add authentication service call
-        User reviewer = null;
+        User reviewer = findByUsername(pcMemberName);
+//        User reviewer = null;
 
         if (reviewer == null) {
             throw new UserNamedidntExistException(pcMemberName);
@@ -379,7 +383,7 @@ public class ArticleService {
         rebuttalRepository.save(rebuttal);
         if(rebuttalRepository.findByIdNot(-1).size()==articleRepository.findByIdNot(-1).size()){
 
-          setMeetingStatus(MeetingStatus.rebuttalFnish);
+          setMeetingStatus(meeting, MeetingStatus.rebuttalFnish);
         }
         return new ResponseWrapper<>(200, ResponseGenerator.success, null);
     }
@@ -496,7 +500,7 @@ public class ArticleService {
     }
     private void meetingStatusModifyBeforeRebuttal(Meeting meeting, String reviewConfirmed, String reviewConfirmed2) {
         if (reviewRelationRepository.findByReviewStatusAndMeetingId(reviewConfirmed, meeting.getId()).size() == reviewRelationRepository.findByMeetingId(meeting.getId()).size()) {
-            setMeetingStatus(reviewConfirmed2);
+            setMeetingStatus(meeting, reviewConfirmed2);
     }
     }
     public Meeting findByID(long id){
@@ -577,8 +581,22 @@ public class ArticleService {
         return articles;
     }
 
-    //todo sent signal to meeting service to set the status of the meeting as rebuttal finish
-    private void setMeetingStatus(String status){
+    @Transactional
+    public Boolean saveReviewRelation(ReviewRelation reviewRelation){
+        reviewRelationRepository.save(reviewRelation);
+        return true;
+    }
 
+    //todo sent signal to meeting service to set the status of the meeting as rebuttal finish
+    private void setMeetingStatus(Meeting meeting,String status){
+        meeting.setStatus(status);
+
+        RestTemplate restTemplate = new RestTemplate();
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        String url = "http://localhost:8080/saveMeeting";
+
+        HttpEntity<Meeting> entity = new HttpEntity<>(meeting, headers);
+        ResponseEntity<String> responseEntity = restTemplate.postForEntity(url, entity, String.class);
     }
 }

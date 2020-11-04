@@ -1,6 +1,7 @@
 package SELab.controller;
 
 
+import SELab.domain.Meeting;
 import SELab.request.admin.ApplicationRatifyRequest;
 import SELab.request.meeting.*;
 import SELab.request.user.InvitationRepoRequest;
@@ -30,6 +31,12 @@ public class MeetingController {
     public ResponseEntity<?> getmeetingInfo(String meetingName) {
         logger.debug("Meeting Information: " + meetingName);
         return ResponseEntity.ok(service.getmeetingInfo(meetingName));
+    }
+
+    @PostMapping("/meeting/saveMeeting")
+    public void saveMeeting(Meeting meeting) {
+        logger.info("save meeting" + meeting.getId());
+        service.saveMeeting(meeting);
     }
 
     @GetMapping("/meeting/meetingInfoById")

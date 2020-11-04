@@ -1,6 +1,7 @@
 package MainService.Service;
 
 import MainService.domain.Article;
+import MainService.domain.ReviewRelation;
 import MainService.request.meeting.*;
 import MainService.request.user.ArticleRequest;
 import MainService.util.response.ResponseGenerator;
@@ -159,5 +160,12 @@ public class Service {
             logger.info("Get Articles by meetingName and status: " + meetingName + ", " + status);
         }
         return ret;
+    }
+
+    public void saveReviewRelation(ReviewRelation reviewRelation) {
+        Boolean ret = articleService.saveReviewRelation(reviewRelation);
+        if(ret){
+            logger.info("saved reviewRelation");
+        }
     }
 }

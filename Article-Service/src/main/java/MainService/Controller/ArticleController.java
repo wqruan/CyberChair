@@ -3,6 +3,7 @@ package MainService.Controller;
 import MainService.Service.Service;
 import MainService.domain.Article;
 import MainService.domain.Author;
+import MainService.domain.ReviewRelation;
 import MainService.request.meeting.*;
 import MainService.request.user.ArticleRequest;
 import com.alibaba.fastjson.JSONArray;
@@ -174,6 +175,12 @@ public class ArticleController {
     public List<Article> getArticlesByMeetingNameAndStatus(String meetingName,String status){
         logger.debug("Get Articles by meetingName and status: " + meetingName + ", " + status);
         return service.getArticlesByMeetingNameAndStatus(meetingName, status);
+    }
+
+    @PostMapping("/meeting/saveReviewRelation")
+    public void saveReviewRelation(ReviewRelation reviewRelation){
+        logger.debug("save reviewRelation");
+        service.saveReviewRelation(reviewRelation);
     }
 
 }

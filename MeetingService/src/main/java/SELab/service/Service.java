@@ -1,5 +1,6 @@
 package SELab.service;
 
+import SELab.domain.Meeting;
 import SELab.repository.*;
 import SELab.request.admin.ApplicationRatifyRequest;
 import SELab.request.meeting.MeetingApplicationRequest;
@@ -222,5 +223,12 @@ public class Service {
             logger.info("Final Publish: " + request.toString());
         }
         return ret;
+    }
+
+    public void saveMeeting(Meeting meeting){
+        Boolean ret = meetingService.saveMeeting(meeting);
+        if(ret){
+            logger.info("saved meeting");
+        }
     }
 }
