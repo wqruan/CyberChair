@@ -236,10 +236,10 @@
 
         formData.append('essayPDF', document.querySelector('input[type=file]').files[0])
         // console.log(formData)
-        let requestUrl = "api/user/articleSubmission"
+        let requestUrl = "api/article/articleSubmission"
         if(this.updateArticle){
           formData.append("articleId", this.updateArticleId)
-          requestUrl = "api/user/updateArticle"
+          requestUrl = "api/article/updateArticle"
         }
 
 
@@ -375,7 +375,7 @@
 
       loadUploadedArticleDetail() {
 
-        var requestUrl = "api/user/articleDetail"
+        var requestUrl = "api/article/articleDetail"
         this.$axios.get(
             requestUrl,
             {params: {articleId: this.updateArticleId}}

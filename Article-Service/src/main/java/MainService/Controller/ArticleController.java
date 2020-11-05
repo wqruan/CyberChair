@@ -40,13 +40,13 @@ public class ArticleController {
 
 
     //get the detailed information about a article
-    @GetMapping("/user/articleDetail")
+    @GetMapping("/article/articleDetail")
     public ResponseEntity<?> getArticleDetail(String articleId){
         logger.debug("article detail get request received, article id = " + articleId);
         return ResponseEntity.ok(service.getArticleDetail(articleId));
     }
     //user submit a new article for a meeting
-    @PostMapping("/user/articleSubmission")
+    @PostMapping("/article/articleSubmission")
     public ResponseEntity<?> submitNewArticle(
             @RequestParam("meetingName") String meetingName,
             @RequestParam("username") String username,
@@ -71,7 +71,7 @@ public class ArticleController {
     }
 
     //user update an existing paper
-    @PostMapping("/user/updateArticle")
+    @PostMapping("/article/updateArticle")
     public ResponseEntity<?> updateArticle(
             @RequestParam("articleId") String articleId,
             @RequestParam("meetingName") String meetingName,
@@ -98,7 +98,7 @@ public class ArticleController {
     }
 
 
-    @GetMapping("/user/reviews")
+    @GetMapping("/article/reviews")
     public ResponseEntity<?> getAllReviewsOfArticle(String articleId){
         return ResponseEntity.ok(service.getReviewsOfArticle(articleId));
     }
@@ -111,55 +111,55 @@ public class ArticleController {
         }
         return authorArgument;
     }
-    @GetMapping("/meeting/reviewArticles")
+    @GetMapping("/article/reviewArticles")
     public ResponseEntity<?> getInfoOfReview(String pcMemberName,String meetingName) {
         logger.debug("Get review information: " + meetingName + " " + pcMemberName);
         return ResponseEntity.ok(service.getInfoOfReview(pcMemberName,meetingName));
     }
 
-    @GetMapping("/meeting/reviewArticle")
+    @GetMapping("/article/reviewArticle")
     public ResponseEntity<?> getInfoOfArticleToReview(String pcMemberName,String articleId) {
         logger.debug("Get Article information: " + articleId + " Reviewer: " + pcMemberName);
         return ResponseEntity.ok(service.getInfoOfArticleToReview(pcMemberName,articleId));
     }
-    @GetMapping("/meeting/alreadyReviewedInfo")
+    @GetMapping("/article/alreadyReviewedInfo")
     public ResponseEntity<?> getAlreadyReviewedInfo(String pcMemberName,String articleId) {
         logger.debug("Get Review information: " + articleId + " Reviewer: " + pcMemberName);
         return ResponseEntity.ok(service.getAlreadyReviewedInfo(pcMemberName,articleId));
     }
-    @PostMapping("/meeting/reviewer")
+    @PostMapping("/article/reviewer")
     public ResponseEntity<?> review(@RequestBody ReviewRequest request) {
         logger.debug("Review: " + request.toString());
         return ResponseEntity.ok(service.review(request));
     }
-    @PostMapping("/meeting/reviewConfirm")
+    @PostMapping("/article/reviewConfirm")
     public ResponseEntity<?> reviewConfirm(@RequestBody ReviewConfirmRequest request) {
         logger.debug("Review Confirm: " + request.toString());
         return ResponseEntity.ok(service.reviewConfirm(request));
     }
 
-    @PostMapping("/meeting/rebuttal")
+    @PostMapping("/article/rebuttal")
     public ResponseEntity<?> rebuttal(@RequestBody RebuttalRequest request) {
         logger.debug("Rebuttal: " + request.toString());
         return ResponseEntity.ok(service.rebuttal(request));
     }
 
-    @GetMapping("/meeting/rebuttalInfo")
+    @GetMapping("/article/rebuttalInfo")
     public ResponseEntity<?> getRebuttalInfo(String articleId) {
         logger.debug("Get Rebuttal Info for article: ID " + articleId);
         return ResponseEntity.ok(service.getRebuttalInfo(articleId));
     }
-    @PostMapping("/meeting/updateReview")
+    @PostMapping("/article/updateReview")
     public ResponseEntity<?> updateReview(@RequestBody UpdateReviewRequest request) {
         logger.debug("update Review: " + request.toString());
         return ResponseEntity.ok(service.updateReview(request));
     }
-    @PostMapping("/meeting/reviewPost")
+    @PostMapping("/article/reviewPost")
     public ResponseEntity<?> reviewPost(@RequestBody ReviewPostRequest request) {
         logger.debug("Review post: " + request.toString());
         return ResponseEntity.ok(service.reviewPost(request));
     }
-    @GetMapping("/meeting/postList")
+    @GetMapping("/article/postList")
     public ResponseEntity<?> getPostList(String articleId,String postStatus) {
         logger.debug("Get postList article: ID " + articleId +" Post Status: " + postStatus);
         return ResponseEntity.ok(service.getPostList(articleId,postStatus));

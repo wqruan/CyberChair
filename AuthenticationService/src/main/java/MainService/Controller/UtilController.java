@@ -63,7 +63,15 @@ public class UtilController {
         logger.info("Get user info by email: " + email);
         return ResponseEntity.ok(service.getUserinfoByEmail(email));
     }
-
+    @GetMapping("/user/undealedNotifications")
+    public ResponseEntity<?> undealedNotifications(String username) throws Exception {
+        return ResponseEntity.ok(service.undealedNotifications(username));
+    }
+    @GetMapping("/user/undealedNotificationsNum")
+    public ResponseEntity<?> undealedNotificationsNum(String username){
+        logger.debug("Get undealedNotificationsNum info : "+username);
+        return  ResponseEntity.ok(service.undealedNotificationsNum(username));
+    }
     @GetMapping("/user/userinfoByFullnameAndEmail")
     public ResponseEntity<?> getUserinfoByFullnameAndEmail(String fullname,String email) {
         logger.info("Get user info by fullName and email: " + fullname + ", " + email);

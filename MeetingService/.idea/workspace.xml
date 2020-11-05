@@ -1,21 +1,209 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f559265-5625-4d9c-8094-efa0bf512c7c" name="Default Changelist" comment="">
+    <list default="true" id="7de1db42-79cf-48e2-865a-648b8233869e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Article-Service/src/main/java/MainService/util/contract/portStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/domain/Meeting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/domain/PCMemberRelation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/utility/contract/ArticleAssignStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/utility/contract/ArticleStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/utility/contract/ChairRelationStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/utility/contract/MeetingStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/utility/contract/PCmemberRelationStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/utility/contract/RebuttalStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/utility/contract/ReviewConfidence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/utility/contract/ReviewScore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/utility/contract/ReviewStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/utility/contract/portStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/config/loginProerties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gateway/.idea/$CACHE_FILE$" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gateway/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gateway/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gateway/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gateway/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gateway/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gateway/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gateway/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gateway/Gateway.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gateway/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gateway/src/main/java/Gateway/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Gateway/src/main/resources/Application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/SELab/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/SELab/security/jwt/JwtConfigProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/SELab/security/jwt/JwtRequestFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/SELab/security/jwt/JwtTokenUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/SELab/security/jwt/JwtUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/SELab/security/jwt/JwtUserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/SELab/security/jwt/SampleManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/SELab/security/jwt/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/SELab/utility/contract/portStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ServiceDiscovery/.idea/$CACHE_FILE$" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ServiceDiscovery/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ServiceDiscovery/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ServiceDiscovery/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ServiceDiscovery/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ServiceDiscovery/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ServiceDiscovery/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ServiceDiscovery/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ServiceDiscovery/src/main/resources/Application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/src/main/java/MainService/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/src/main/java/MainService/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Article-Service/src/main/java/MainService/Controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/src/main/java/MainService/Controller/ArticleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Article-Service/src/main/java/MainService/Service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/src/main/java/MainService/Service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Article-Service/src/main/java/MainService/Service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/src/main/java/MainService/Service/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/src/main/java/MainService/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/src/main/java/MainService/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Application.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Controller/ArticleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Service/ArticleService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Service/ArticleService$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Service/ArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Service/ArticleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Service/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/Service/Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/MainService/domain/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Article-Service/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Article-Service/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/Controller/UtilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/Controller/UtilController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/Service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/Service/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/Service/UtilService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/java/MainService/Service/UtilService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Application$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Application$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Controller/UtilController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Controller/UtilController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Service/Service.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Service/Service.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Service/UtilService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/MainService/Service/UtilService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AuthenticationService/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../AuthenticationService/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/controller/admin/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/controller/admin/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/controller/meeting/MeetingArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/controller/meeting/MeetingArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/controller/meeting/MeetingReviewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/controller/meeting/MeetingReviewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/controller/meeting/MeetingUtilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/controller/meeting/MeetingUtilController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/controller/util/UtilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/controller/util/UtilController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/security/jwt/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/security/jwt/JwtTokenUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/security/jwt/JwtUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/security/jwt/JwtUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/security/jwt/SampleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_backend/src/main/java/SELab/security/jwt/SampleManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_backend/src/test/java/TestUtil/TestUtility.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/.browserslistrc" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/.browserslistrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/ISSUE_TEMPLATE.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/ISSUE_TEMPLATE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/LICENSE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/babel.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/cypress.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/cypress.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/jest.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/now.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/now.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/postcss.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/assets/vuetify.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/assets/vuetify.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/base/Card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/base/Card.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/base/Item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/base/Item.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/base/ItemGroup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/base/ItemGroup.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/base/ItemSubGroup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/base/ItemSubGroup.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/base/MaterialAlert.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/base/MaterialAlert.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/base/MaterialCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/base/MaterialCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/base/MaterialChartCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/base/MaterialChartCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/base/MaterialSnackbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/base/MaterialSnackbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/base/MaterialStatsCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/base/MaterialStatsCard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/base/MaterialTabs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/base/MaterialTabs.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/base/MaterialTestimony.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/base/MaterialTestimony.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/base/Subheading.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/base/Subheading.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/base/VComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/base/VComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/country.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/components/country.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/i18n.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/i18n.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/locales/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/locales/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/plugins/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/plugins/base.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/plugins/chartist.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/plugins/chartist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/plugins/vee-validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/plugins/vee-validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/plugins/vuetify.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/plugins/vuetify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/plugins/vuetifyToastSnackbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/plugins/vuetifyToastSnackbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/overrides.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/overrides.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_appbar.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_appbar.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_buttons.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_buttons.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_card.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_card.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_chip.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_chip.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_footer.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_footer.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_map.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_map.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_modal.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_modal.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_notification.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_notification.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_pagination.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_pagination.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_settings.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_sidebar.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_sidebar.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_tab.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_tab.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_table.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_table.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_view.sass" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/sass/vuetify-material/_view.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/ParticlesJS.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/ParticlesJS.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/Register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/Dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/Dashboard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/Dashboard1.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/Dashboard1.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/DashboardAdmin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/DashboardAdmin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/EssayDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/EssayDetail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/PostDisplay.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/PostDisplay.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/ReviewArticle.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/ReviewArticle.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/ReviewList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/ReviewList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/SubmissionEssayList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/SubmissionEssayList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/component/Buttons.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/component/Buttons.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/component/Grid.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/component/Grid.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/component/Icons.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/component/Icons.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/component/Notifications.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/component/Notifications.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/component/Tabs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/component/Tabs.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/component/Typography.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/component/Typography.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/components/core/AppBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/components/core/AppBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/components/core/Drawer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/components/core/Drawer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/components/core/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/components/core/Footer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/components/core/Settings.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/components/core/Settings.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/components/core/View.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/components/core/View.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/conferenceApplier.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/conferenceApplier.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/conferenceDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/conferenceDetail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/cyberchairComponents/authorInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/cyberchairComponents/authorInfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/cyberchairComponents/authorRank.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/cyberchairComponents/authorRank.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/cyberchairComponents/conferenceInfo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/cyberchairComponents/conferenceInfo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/cyberchairComponents/displayList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/cyberchairComponents/displayList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/cyberchairComponents/essayArticle.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/cyberchairComponents/essayArticle.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/cyberchairComponents/post.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/cyberchairComponents/post.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/cyberchairComponents/postComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/cyberchairComponents/postComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/cyberchairComponents/topicOptions.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/cyberchairComponents/topicOptions.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/essaySubmission.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/essaySubmission.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/invitation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/invitation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/maps/GoogleMaps.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/maps/GoogleMaps.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/notification.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/notification.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/pages/Rtl.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/pages/Rtl.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/pages/Timeline.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/pages/Timeline.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/pages/UserProfile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/pages/UserProfile.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/reviewDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/reviewDetail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/tables/RegularTables.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/src/views/dashboard/tables/RegularTables.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/tests/e2e/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/tests/e2e/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/tests/e2e/plugins/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/tests/e2e/plugins/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/tests/e2e/specs/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/tests/e2e/specs/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/tests/e2e/support/commands.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/tests/e2e/support/commands.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/tests/e2e/support/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/tests/e2e/support/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/tests/unit/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/tests/unit/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/tests/unit/example.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/tests/unit/example.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cyberchair_frontend/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Cyberchair_frontend/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SELab/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SELab/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SELab/controller/MeetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SELab/controller/MeetingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SELab/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SELab/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SELab/remote/RemoteArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SELab/remote/RemoteArticle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SELab/remote/RemoteReviewRelation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SELab/remote/RemoteReviewRelation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SELab/remote/RemoteUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SELab/remote/RemoteUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SELab/service/MeetingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SELab/service/MeetingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SELab/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SELab/service/Service.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,243 +214,45 @@
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SELab/domain/Article.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SELab/domain/Meeting.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SELab/remote/RemoteReviewRelation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#668#684#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SELab/service/Service.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="230" column="29" selection-start-line="230" selection-start-column="29" selection-end-line="230" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SELab/remote/RemoteArticle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="55" lean-forward="true" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SELab/domain/ReviewRelation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SELab/remote/RemoteUser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SELab/domain/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SELab/service/MeetingService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2673">
-              <caret line="258" column="34" selection-start-line="258" selection-start-column="34" selection-end-line="258" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/SELab/controller/MeetingController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="35" column="18" lean-forward="true" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/SELab/domain/ChairRelation.java" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/SELab/service/Service.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/SELab/service/MeetingService.java" root0="SKIP_INSPECTION" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/SELab/domain/PCMemberRelation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SELab/domain/Meeting.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SELab/domain/Article.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SELab/remote/RemoteArticle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SELab/remote/RemoteReviewRelation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SELab/service/Service.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SELab/controller/MeetingController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SELab/service/MeetingService.java" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="822" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/SELab/service/Service.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MeetingService" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MeetingService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MeetingService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MeetingService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MeetingService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SELab" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MeetingService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SELab" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MeetingService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SELab" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MeetingService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SELab" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MeetingService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SELab" type="462c0819:PsiDirectoryNode" />
-              <item name="remote" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MeetingService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="SELab" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/src/main/resources/application.properties" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/SELab" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\IdeaProjects\SELab3\CyberChair\MeetingService\config" />
+      <recent name="E:\Projects\IdeaProjects\SELab3\CyberChair\MeetingService\src\main\resources" />
+      <recent name="E:\Projects\IdeaProjects\SELab3\CyberChair\MeetingService\src\main\1233" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="SELab.utility.contract" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Projects\IdeaProjects\SELab3\CyberChair\MeetingService\src\main\java\SELab" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -280,6 +270,11 @@
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="lab2" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="SELab.Application" />
+      <option name="ACTIVE_PROFILES" value="application.properties" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <envs>
+        <env name="server.port" value="8083" />
+      </envs>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -302,296 +297,63 @@
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7525000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="822" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28540772" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32876712" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32876712" />
-      <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/repository/MeetingRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/repository/PCMemberRelationRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#231#232#0" expanded="true" />
-            <element signature="e#293#294#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/exception/AtLeastThreePCMemberException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/exception/AtLeastOneTopicException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/exception/AuthenticationFailedException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/domain/Author.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="25" selection-start-line="10" selection-start-column="4" selection-end-line="17" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/domain/ChairRelation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/domain/PCMemberRelation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/domain/Rebuttal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/domain/PostMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/domain/ReviewRelation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/domain/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/domain/Meeting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/controller/MeetingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="35" column="18" lean-forward="true" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/remote/RemoteArticle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="55" lean-forward="true" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/remote/RemoteReviewRelation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#668#684#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/remote/RemoteUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/domain/Article.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/service/Service.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="230" column="29" selection-start-line="230" selection-start-column="29" selection-end-line="230" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SELab/service/MeetingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2673">
-          <caret line="258" column="34" selection-start-line="258" selection-start-column="34" selection-end-line="258" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/SELab/controller/MeetingController.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/SELab/controller/MeetingController.java</url>
+          <line>75</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/SELab/service/Service.java</url>
+          <line>101</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/SELab/service/Service.java</url>
+          <line>100</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/SELab/service/Service.java</url>
+          <line>102</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/SELab/service/Service.java</url>
+          <line>103</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/SELab/service/Service.java</url>
+          <line>104</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/SELab/service/Service.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/SELab/service/Service.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/SELab/service/MeetingService.java</url>
+          <line>472</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

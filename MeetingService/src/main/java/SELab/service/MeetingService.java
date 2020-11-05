@@ -217,7 +217,7 @@ public class MeetingService {
     }
 
     @Transactional
-    public ResponseWrapper<?> authorMeeting(String username) throws JsonProcessingException {
+    public ResponseWrapper<?> authorMeeting(String username) throws Exception {
         List<Article> articleList = RemoteArticle.findByContributorName(username);
         HashMap<String, Set<HashMap<String, Object>>> body = new HashMap<>();
         Set<HashMap<String, Object>> response = new HashSet<>();
@@ -274,7 +274,7 @@ public class MeetingService {
     }
 
     @Transactional
-    public ResponseWrapper<?> beginReview(BeginReviewRequest request) throws JsonProcessingException {
+    public ResponseWrapper<?> beginReview(BeginReviewRequest request) throws Exception {
         String meetingName = request.getMeetingName();
         Meeting meeting = meetingRepository.findByMeetingName(meetingName);
         if (meeting == null) {
@@ -526,5 +526,12 @@ public class MeetingService {
         return new ResponseWrapper<>(200, ResponseGenerator.success, null);
     }
 
+    @Transactional
+    public List<PCMemberRelation> getPCMemberRelationByIdAndStatus(long userID, String undealed) {
+        List<PCMemberRelation> pcMember = pcMemberRelationRepository.findByPcmemberIdAndStatus(userID, undealed);
+        if(pcMember == null)
+            System.out.println("getPCMemberRelationByIdAndStatus: can not find pc members!");
+        return pcMember;
+    }
 }
 

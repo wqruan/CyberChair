@@ -102,7 +102,7 @@
           this.$toast(this.tips_text,{color:'red'});
           return;
         }
-        let requestUrl = "api/meeting/reviewPost";
+        let requestUrl = "api/article/reviewPost";
         let formData = new FormData();
         formData.append("articleId",this.articleId);
         formData.append("targetId",this.targetId);

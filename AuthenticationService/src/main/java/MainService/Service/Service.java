@@ -43,7 +43,20 @@ public class Service {
         }
         return ret;
     }
-
+    public ResponseWrapper<?> undealedNotifications(String username) throws Exception {
+        ResponseWrapper<?> ret = utilService.undealedNotifications(username);
+        if(ret.getResponseMessage().equals(ResponseGenerator.success)){
+            logger.debug("undealed messages of " + username + fetched);
+        }
+        return ret;
+    }
+    public ResponseWrapper<?> undealedNotificationsNum(String username){
+        ResponseWrapper<?> ret = utilService.undealedNotificationsNum(username);
+        if(ret.getResponseMessage().equals(ResponseGenerator.success)){
+            logger.debug("the num of undealed messages of " + username + "has been fetched.");
+        }
+        return ret;
+    }
     public ResponseWrapper<?> login(LoginRequest request) {
         logger.info(request.getUsername());
         logger.info("asdf");

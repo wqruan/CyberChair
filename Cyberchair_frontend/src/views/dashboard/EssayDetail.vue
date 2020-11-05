@@ -103,7 +103,7 @@ export default {
         loadDetailEssay: function(){
             this.essayId = this.articleId;
             var that = this
-            var requestUrl = "api/user/articleDetail"
+            var requestUrl = "api/article/articleDetail"
             this.$axios.get(
                 requestUrl,
                 {params: {

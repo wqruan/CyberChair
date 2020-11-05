@@ -140,7 +140,7 @@ export default {
         submitRebuttal:function(status){
           let articleId = this.$route.query.articleId;
           let content = this.rebuttal;
-          let requestUrl = "api/meeting/rebuttal";
+          let requestUrl = "api/article/rebuttal";
           let that = this;
           this.$axios.post(requestUrl ,
             {
@@ -175,7 +175,7 @@ export default {
         loadRebuttal:function() {
           this.articleId = this.$route.query.articleId;
           let that = this;
-          let requestUrl = "api/meeting/rebuttalInfo";
+          let requestUrl = "api/article/rebuttalInfo";
           this.$axios.get(
             requestUrl,
             {params: {
@@ -206,7 +206,7 @@ export default {
           this.articleId = this.$route.query.articleId;
           this.articleLoadCompleted = true;
           let that = this;
-          let requestUrl = "api/user/reviews";
+          let requestUrl = "api/article/reviews";
           this.$axios.get(
             requestUrl,
             {params: {

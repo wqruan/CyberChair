@@ -36,6 +36,16 @@ public class User implements UserDetails, Serializable {
         this.institution = institution;
         this.region = region;
     }
+
+    public User(Long id,String username, String fullname, String password, String email, String institution, String region) {
+        this.username = username;
+        this.fullname = fullname;
+        this.password = password;
+        this.email = email;
+        this.institution = institution;
+        this.region = region;
+        this.id = id;
+    }
     public User(User user) {
         this.username = user.getUsername();
         this.fullname = user.getFullname();

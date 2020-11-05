@@ -5,12 +5,23 @@ package MainService.Service;
 import MainService.Request.LoginRequest;
 import MainService.Request.RegisterRequest;
 
+import MainService.domain.Meeting;
+import MainService.domain.PCMemberRelation;
 import MainService.domain.User;
 import MainService.exception.*;
+import MainService.utility.contract.PCmemberRelationStatus;
+import MainService.utility.contract.portStore;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.util.Streamable;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
@@ -23,12 +34,11 @@ import MainService.security.jwt.JwtTokenUtil;
 import MainService.security.jwt.SampleManager;
 import MainService.response.ResponseGenerator;
 import MainService.response.ResponseWrapper;
+import org.springframework.web.client.RestTemplate;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 import java.util.regex.Pattern;
 
 @Service
@@ -124,7 +134,7 @@ public class UtilService {
         }//邀请对象是否存在
         HashMap<String, HashMap<String, Object>> body = new HashMap<>();
         HashMap<String, Object> response = ResponseGenerator.generate(user,
-                new String[]{"username","fullname","email","institution","region"}, null);
+                new String[]{"id","username","fullname","email","institution","region"}, null);
 
         body.put("UserInformation",response);
         return new ResponseWrapper<>(200, ResponseGenerator.success, body);
@@ -136,7 +146,7 @@ public class UtilService {
         }//邀请对象是否存在
         HashMap<String, HashMap<String, Object>> body = new HashMap<>();
         HashMap<String, Object> response = ResponseGenerator.generate(user,
-                new String[]{"username","fullname","email","institution","region"}, null);
+                new String[]{"id","username","fullname","email","institution","region"}, null);
 
         body.put("UserInformation",response);
         return new ResponseWrapper<>(200, ResponseGenerator.success, body);
@@ -150,7 +160,7 @@ public class UtilService {
         }//邀请对象是否存在
         HashMap<String, HashMap<String, Object>> body = new HashMap<>();
         HashMap<String, Object> response = ResponseGenerator.generate(user,
-                new String[]{"username","fullname","email","institution","region"}, null);
+                new String[]{"id","username","fullname","email","institution","region"}, null);
 
         body.put("UserInformation",response);
         return new ResponseWrapper<>(200, ResponseGenerator.success, body);
@@ -163,7 +173,7 @@ public class UtilService {
         }//邀请对象是否存在
         HashMap<String, HashMap<String, Object>> body = new HashMap<>();
         HashMap<String, Object> response = ResponseGenerator.generate(user,
-                new String[]{"username","fullname","email","institution","region"}, null);
+                new String[]{"id","username","fullname","email","institution","region"}, null);
 
         body.put("UserInformation",response);
         return new ResponseWrapper<>(200, ResponseGenerator.success, body);
@@ -176,13 +186,24 @@ public class UtilService {
         Set<HashMap<String, Object>> response = new HashSet<>();
         for (User user: users) {
             HashMap<String, Object> userInfo = ResponseGenerator.generate(user,
-                    new String[]{"username","fullname","email","institution","region"}, null);
+                    new String[]{"id","username","fullname","email","institution","region"}, null);
             response.add(userInfo);
         }
         body.put("users",response);
         return new ResponseWrapper<>(200, ResponseGenerator.success, body);
     }
-
+    public  ResponseWrapper<?> undealedNotificationsNum(String username){
+        Long userId = userRepository.findByUsername(username).getId();
+        List<PCMemberRelation> relationList =new ArrayList<>();
+        try {
+            relationList = findByPcmemberIdAndStatus(userId, PCmemberRelationStatus.undealed);
+        }catch (Exception e ){
+            logger.info(e.getLocalizedMessage());
+        }
+        HashMap<String, Object> body = new HashMap<>();
+        body.put("undealedNotificationsNum", relationList.size());
+        return new ResponseWrapper<>(200, ResponseGenerator.success, body);
+    }
     public byte[] getPdfContent(String pdfUrl){
         File file;
         FileInputStream inputStream=null;
@@ -205,5 +226,58 @@ public class UtilService {
         return bytes;
     }
 
+    public ResponseWrapper<?> undealedNotifications(String username) throws Exception{
+        Long userId = userRepository.findByUsername(username).getId();
+        List<PCMemberRelation> relationList = findByPcmemberIdAndStatus(userId, PCmemberRelationStatus.undealed);
+        HashMap<String, Set<HashMap<String, Object>>> body = new HashMap<>();
+        Set<HashMap<String, Object>> response = new HashSet<>();
+        for(PCMemberRelation relation : relationList){
+            Meeting meeting = findByID((long)relation.getMeetingId());
+            HashMap<String, Object> invitationInfo = ResponseGenerator.generate(meeting,
+                    new String[]{"meetingName", "chairName","topic"}, null);
+            response.add(invitationInfo);
+        }
+        body.put("invitations", response);
+        return new ResponseWrapper<>(200, ResponseGenerator.success, body);
+    }
 
+    public static List<PCMemberRelation> findByPcmemberIdAndStatus(long userID, String undealed) throws JsonProcessingException {
+        RestTemplate restTemplate = new RestTemplate();
+        ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://localhost:"+portStore.MeetingService+"/meeting/getPCMemberRelationByIdAndStatus?userID=" + userID + "&undealed=" + undealed,String.class);
+
+        String jsonString = responseEntity.getBody();
+        ObjectMapper mapper = new ObjectMapper();
+        List<PCMemberRelation> ret = mapper.readValue(jsonString, new TypeReference<List<PCMemberRelation>>(){});
+        return ret;
+    }
+    public Meeting findByID(long id){
+        RestTemplate restTemplate = new RestTemplate();
+        ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://localhost:"+ portStore.MeetingService+"/meeting/meetingInfoById?meetingID="+id,String.class);
+
+        JSONObject tmp = JSON.parseObject(responseEntity.getBody());
+        JSONObject meetingInfo = (JSONObject) tmp.get("responseBody");
+        meetingInfo = (JSONObject) meetingInfo.get("meetingInfo");
+
+        Set<String> topicSet = new HashSet<>();
+        JSONArray parseArray = JSON.parseArray(meetingInfo.getString("topic"));
+        for(Object t: parseArray){
+            topicSet.add((String)t);
+        }
+
+        Meeting meeting = new Meeting((String) meetingInfo.get("chairName"),
+                meetingInfo.getString("meetingName"),
+                meetingInfo.getString("acronym"),
+                meetingInfo.getString("region"),
+                meetingInfo.getString("city"),
+                meetingInfo.getString("venue"),
+                topicSet,
+                meetingInfo.getString("organizer"),
+                meetingInfo.getString("webPage"),
+                meetingInfo.getString("submissionDeadlineDate"),
+                meetingInfo.getString("notificationOfAcceptanceDate"),
+                meetingInfo.getString("conferenceDate"),
+                meetingInfo.getString("status") 
+        );
+        return meeting;
+    }
 }

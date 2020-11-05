@@ -187,7 +187,7 @@ import topicOptions from './cyberchairComponents/topicOptions'
                 if(this.situation == 'accepted' && this.selectedTopic.length == 0){
                     return false;
                 }
-                this.$axios.post('api/user/invitationRepo',
+                this.$axios.post('api/meeting/invitationRepo',
                     {
                         username:localStorage.username,
                         meetingName:this.meetingName,
@@ -208,7 +208,7 @@ import topicOptions from './cyberchairComponents/topicOptions'
         },
         mounted: function(){
             var that = this;
-            this.$axios.get('api/user/alreadyDealedNotifications',
+            this.$axios.get('api/meeting/alreadyDealedNotifications',
                 {params:{username: localStorage.username}}
             ).then(resp => {
                 if(resp.data.responseCode == 200 && resp.data.responseMessage == "success"){
@@ -227,7 +227,7 @@ import topicOptions from './cyberchairComponents/topicOptions'
                 this.tips_text = "error occurred when loading notification data";
                 this.$toast(this.tips_text,{color:'red'})
             });
-            this.$axios.get('api/user/undealedNotifications',
+            this.$axios.get('api/meeting/undealedNotifications',
                 {params:{username: localStorage.username}}
             ).then(resp => {
                 if(resp.data.responseCode == 200 && resp.data.responseMessage == "success"){

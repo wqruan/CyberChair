@@ -24,7 +24,15 @@ public class User implements UserDetails {
     private String region;
 
     public User(){}
-
+    public User(long id,String username, String fullname, String password, String email, String institution, String region) {
+        this.username = username;
+        this.fullname = fullname;
+        this.password = password;
+        this.email = email;
+        this.institution = institution;
+        this.region = region;
+        this.id = id;
+    }
     public User(String username, String fullname, String password, String email, String institution, String region) {
         this.username = username;
         this.fullname = fullname;

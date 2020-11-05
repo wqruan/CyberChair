@@ -105,7 +105,7 @@
       loadArticles(){
         let pcMemberName = this.$route.query.pcMemberName;
         let meetingName =  this.$route.query.meetingName;
-        let requestUrl = "api/meeting/reviewArticles";
+        let requestUrl = "api/article/reviewArticles";
 
         let that = this;
           this.$axios.get(
@@ -155,7 +155,7 @@
         this.functions["queuingArticle"]["reviewArticle"] = function(item){
           let username = localStorage.username;
           that.$router.push({
-            path: '/meeting/reviewArticle',
+            path: '/article/reviewArticle',
             query: {
               pcMemberName:username,
               articleId:item.articleId,
@@ -168,7 +168,7 @@
         this.functions["alreadyReviewedArticle"]["alreadyReviewed"] = function(item){
           let username = localStorage.username;
           that.$router.push({
-            path: '/meeting/reviewArticle',
+            path: '/article/reviewArticle',
             query: {
               pcMemberName:username,
               articleId:item.articleId,

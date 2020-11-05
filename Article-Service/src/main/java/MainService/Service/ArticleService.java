@@ -7,10 +7,7 @@ import MainService.repository.PostRepository;
 import MainService.repository.RebuttalRepository;
 import MainService.request.meeting.*;
 import MainService.request.user.ArticleRequest;
-import MainService.util.contract.ArticleStatus;
-import MainService.util.contract.MeetingStatus;
-import MainService.util.contract.RebuttalStatus;
-import MainService.util.contract.ReviewStatus;
+import MainService.util.contract.*;
 import MainService.repository.ArticleRepository;
 import MainService.repository.ReviewRelationRepository;
 import MainService.util.response.ResponseGenerator;
@@ -197,6 +194,7 @@ public class ArticleService {
         String internalFilePath = targetRootDir +
                 articleUploader.getUsername() + File.separator +
                 request.getSubmitDate() + File.separator;
+        System.out.println(internalFilePath);
         try {
             saveFileToServer(pdfFile, internalFilePath);
         } catch (IOException ex) {
@@ -479,7 +477,7 @@ public class ArticleService {
     }
     public static User findByUsername(String username){
         RestTemplate restTemplate = new RestTemplate();
-        ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://localhost:8080/user/userinfo?username="+username,String.class);
+        ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://localhost:"+portStore.UserService+"/user/userinfo?username="+username,String.class);
         JSONObject tmp =JSON.parseObject(responseEntity.getBody());
         JSONObject userInfo = (JSONObject) tmp.get("responseBody");
         userInfo = (JSONObject) userInfo.get("UserInformation");
@@ -490,12 +488,12 @@ public class ArticleService {
     public static User findById(long id){
 
         RestTemplate restTemplate = new RestTemplate();
-        ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://localhost:8080/user/userinfoByID?userID="+id,String.class);
+        ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://localhost:"+portStore.UserService+"/user/userinfoByID?userID="+id,String.class);
         JSONObject tmp =JSON.parseObject(responseEntity.getBody());
         JSONObject userInfo = (JSONObject) tmp.get("responseBody");
         userInfo = (JSONObject) userInfo.get("UserInformation");
-
-        User user = new User((String) userInfo.get("username"),userInfo.getString("fullname"),"",userInfo.getString("email"),userInfo.getString("institution"),userInfo.getString("region"));
+        System.out.println(userInfo);
+        User user = new User((Long)userInfo.get("id"),(String) userInfo.get("username"),userInfo.getString("fullname"),"",userInfo.getString("email"),userInfo.getString("institution"),userInfo.getString("region"));
         return user;
     }
     private void meetingStatusModifyBeforeRebuttal(Meeting meeting, String reviewConfirmed, String reviewConfirmed2) {
@@ -505,7 +503,7 @@ public class ArticleService {
     }
     public Meeting findByID(long id){
         RestTemplate restTemplate = new RestTemplate();
-        ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://localhost:8080/meeting/meetingInfoById?meetingID="+id,String.class);
+        ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://localhost:"+portStore.MeetingService+"/meeting/meetingInfoById?meetingID="+id,String.class);
 
         JSONObject tmp =JSON.parseObject(responseEntity.getBody());
         JSONObject meetingInfo = (JSONObject) tmp.get("responseBody");
@@ -536,7 +534,7 @@ public class ArticleService {
 
     public Meeting findByMeetingName(String name){
         RestTemplate restTemplate = new RestTemplate();
-        ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://localhost:8080/meeting/meetingInfo?meetingName="+name,String.class);
+        ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://localhost:"+portStore.MeetingService+"/meeting/meetingInfo?meetingName="+name,String.class);
 
         JSONObject tmp =JSON.parseObject(responseEntity.getBody());
         JSONObject meetingInfo = (JSONObject) tmp.get("responseBody");
@@ -594,7 +592,7 @@ public class ArticleService {
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
-        String url = "http://localhost:8080/saveMeeting";
+        String url = "http://localhost:"+ portStore.MeetingService+"/saveMeeting";
 
         HttpEntity<Meeting> entity = new HttpEntity<>(meeting, headers);
         ResponseEntity<String> responseEntity = restTemplate.postForEntity(url, entity, String.class);

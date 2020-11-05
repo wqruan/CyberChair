@@ -2,6 +2,7 @@ package SELab.controller;
 
 
 import SELab.domain.Meeting;
+import SELab.domain.PCMemberRelation;
 import SELab.request.admin.ApplicationRatifyRequest;
 import SELab.request.meeting.*;
 import SELab.request.user.InvitationRepoRequest;
@@ -9,18 +10,24 @@ import SELab.service.Service;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class MeetingController {
     Logger logger = LoggerFactory.getLogger(MeetingController.class);
 
     private Service service;
-
+    @Autowired
+    public MeetingController(Service service){
+        this.service = service;
+    }
     @PostMapping("/meeting/application")
     public ResponseEntity<?> meetingApplication(@RequestBody MeetingApplicationRequest request) {
         logger.debug("Meeting application: " + request.toString());
@@ -75,31 +82,31 @@ public class MeetingController {
         return ResponseEntity.ok(service.applicationRatify(request));
     }
 
-    @GetMapping("/user/chairMeeting")
+    @GetMapping("/meeting/chairMeeting")
     public ResponseEntity<?> chairMeeting(String username){
         logger.debug("Get chair meeting info: "+username);
         return ResponseEntity.ok(service.chairMeeting(username));
     }
 
-    @GetMapping("/user/pcMemberMeeting")
+    @GetMapping("/meeting/pcMemberMeeting")
     public ResponseEntity<?> pcMemberMeeting(String username){
         logger.debug("Get pcMemberMeeting info : "+username);
         return  ResponseEntity.ok(service.pcMemberMeeting(username));
     }
 
-    @GetMapping("/user/authorMeeting")
-    public ResponseEntity<?> authorMeeting(String username) throws JsonProcessingException {
+    @GetMapping("/meeting/authorMeeting")
+    public ResponseEntity<?> authorMeeting(String username) throws Exception {
         logger.debug("Get author meeting info : "+username);
         return  ResponseEntity.ok(service.authorMeeting(username));
     }
 
-    @GetMapping("/user/availableMeeting")
+    @GetMapping("/meeting/availableMeeting")
     public ResponseEntity<?> availableMeeting(String username){
         logger.debug("Get available meeting info : "+username);
         return  ResponseEntity.ok(service.availableMeeting(username));
     }
 
-    @GetMapping("/user/undealedNotifications")
+    @GetMapping("/meeting/undealedNotifications")
     public ResponseEntity<?> undealedNotifications(String username){
         logger.debug("Get undealedNotifications info : "+username);
         return ResponseEntity.ok(service.undealedNotifications(username));
@@ -111,26 +118,22 @@ public class MeetingController {
         return ResponseEntity.ok(service.beginSubmission(request));
     }
 
-    @PostMapping("/user/invitationRepo")
+    @PostMapping("/meeting/invitationRepo")
     public ResponseEntity<?> invitationRepo(@RequestBody InvitationRepoRequest request){
         logger.debug("Post invitationRepo info : "+request.toString());
         return ResponseEntity.ok(service.invitationRepo(request));
     }
 
-    @GetMapping("/user/undealedNotificationsNum")
-    public ResponseEntity<?> undealedNotificationsNum(String username){
-        logger.debug("Get undealedNotificationsNum info : "+username);
-        return  ResponseEntity.ok(service.undealedNotificationsNum(username));
-    }
 
-    @GetMapping("/user/alreadyDealedNotifications")
+
+    @GetMapping("/meeting/alreadyDealedNotifications")
     public ResponseEntity<?> alreadyDealedNotifications(String username){
         logger.debug("Get alreadyDealedNotifications info : "+username);
         return  ResponseEntity.ok(service.alreadyDealedNotifications(username));
     }
 
     @PostMapping("/meeting/beginReview")
-    public ResponseEntity<?> beginReview(@RequestBody BeginReviewRequest request) throws JsonProcessingException {
+    public ResponseEntity<?> beginReview(@RequestBody BeginReviewRequest request) throws Exception {
         logger.debug("Begin Review: " + request.toString());
         return ResponseEntity.ok(service.beginReview(request));
     }
@@ -151,5 +154,11 @@ public class MeetingController {
     public ResponseEntity<?> finalPublish(@RequestBody FinalPublishRequest request) {
         logger.debug("Final Publish: " + request.toString());
         return ResponseEntity.ok(service.finalPublish(request));
+    }
+
+    @GetMapping("/meeting/getPCMemberRelationByIdAndStatus")
+    public List<PCMemberRelation> getPCMemberRelationByIdAndStatus(long userID, String undealed){
+        logger.debug("Get PCMemberRelation by id and status: " + userID + ", " + undealed);
+        return service.getPCMemberRelationByIdAndStatus(userID, undealed);
     }
 }

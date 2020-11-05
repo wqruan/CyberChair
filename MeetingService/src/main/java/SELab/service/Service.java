@@ -1,6 +1,7 @@
 package SELab.service;
 
 import SELab.domain.Meeting;
+import SELab.domain.PCMemberRelation;
 import SELab.repository.*;
 import SELab.request.admin.ApplicationRatifyRequest;
 import SELab.request.meeting.MeetingApplicationRequest;
@@ -14,6 +15,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @org.springframework.stereotype.Service
 @RestController
@@ -87,6 +90,7 @@ public class Service {
 
     public ResponseWrapper<?> getqueueingApplication() {
         ResponseWrapper<?> ret = meetingService.getqueueingApplication();
+        System.out.println(12346);
         if(ret.getResponseMessage().equals(ResponseGenerator.success)){
             logger.debug("Queuing applications have been fetched by admin");
         }
@@ -95,6 +99,9 @@ public class Service {
 
     public ResponseWrapper<?> getalreadyApplication() {
         ResponseWrapper<?> ret = meetingService.getalreadyApplication();
+
+        System.out.println(1234);
+
         if(ret.getResponseMessage().equals(ResponseGenerator.success)){
             logger.debug("Dealed applications have been fetched by admin");
         }
@@ -125,7 +132,7 @@ public class Service {
         return  ret;
     }
 
-    public ResponseWrapper<?> authorMeeting(String username) throws JsonProcessingException {
+    public ResponseWrapper<?> authorMeeting(String username) throws Exception {
         ResponseWrapper<?> ret = meetingService.authorMeeting(username);
         if (ret.getResponseMessage().equals(ResponseGenerator.success)){
             logger.debug("Meeting list "+ username + " role as author has been fetched.");
@@ -192,7 +199,7 @@ public class Service {
         return ret;
     }
     
-    public ResponseWrapper<?> beginReview(BeginReviewRequest request) throws JsonProcessingException {
+    public ResponseWrapper<?> beginReview(BeginReviewRequest request) throws Exception {
         ResponseWrapper<?> ret = meetingService.beginReview(request);
         if(ret.getResponseMessage().equals(ResponseGenerator.success)){
             logger.info("Meeting named " + request.getMeetingName() + " review begin");
@@ -230,5 +237,13 @@ public class Service {
         if(ret){
             logger.info("saved meeting");
         }
+    }
+
+    public List<PCMemberRelation> getPCMemberRelationByIdAndStatus(long userID, String undealed) {
+        List<PCMemberRelation> ret = meetingService.getPCMemberRelationByIdAndStatus(userID, undealed);
+        if(ret != null){
+            logger.info("Get PCMemberRelation by id and status: " + userID + ", " + undealed);
+        }
+        return ret;
     }
 }

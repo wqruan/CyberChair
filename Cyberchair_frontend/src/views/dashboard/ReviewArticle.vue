@@ -292,7 +292,7 @@
         let pcMemberName = this.pcMemberName;
         let articleId = this.articleId;
         let status = this.rebuttalStatus;
-        let requestUrl = "api/meeting/reviewConfirm";
+        let requestUrl = "api/article/reviewConfirm";
         this.$axios.post(
           requestUrl,
           {
@@ -307,7 +307,7 @@
               this.$toast(this.tips_text,{color:'green'})
               window.setTimeout(function(){
                 that.$router.push({
-                  path: '/meeting/reviewArticles',
+                  path: '/article/reviewArticles',
                   query: {
                     pcMemberName: that.pcMemberName,
                     meetingName: that.meetingName,
@@ -332,7 +332,7 @@
         let score = this.markSet[this.markRating['rating']]['mark'];
         let confidence = this.confidenceSet[this.confidenceRating['rating']];
         let status = this.rebuttalStatus;
-        let requestUrl = "api/meeting/reviewer";
+        let requestUrl = "api/article/reviewer";
         let getJson =           {
           articleid: articleId,
           pcMemberName:pcMemberName,
@@ -343,7 +343,7 @@
 
         if(this.reviewStatus != "unReviewed")
         {
-          requestUrl = "api/meeting/updateReview"
+          requestUrl = "api/article/updateReview"
           getJson =           {
             articleId: articleId,
             pcMemberName:pcMemberName,
@@ -366,7 +366,7 @@
             if(resp.data.responseCode == 200 && resp.data.responseMessage == "success"){
               this.tips_text = "commit review successfully";
               this.$toast(this.tips_text,{color:'green'})
-              let jumpUrl = "/meeting/reviewArticles?pcMemberName=" + this.pcMemberName + "&meetingName=" + this.meetingName;
+              let jumpUrl = "/article/reviewArticles?pcMemberName=" + this.pcMemberName + "&meetingName=" + this.meetingName;
               window.setTimeout(function(){
                 this.$router.replace(jumpUrl);
               }.bind(this), 1000);
@@ -440,7 +440,7 @@
       loadRebuttal:function() {
         this.articleId = this.$route.query.articleId;
         let that = this;
-        let requestUrl = "api/meeting/rebuttalInfo";
+        let requestUrl = "api/article/rebuttalInfo";
         this.$axios.get(
           requestUrl,
           {params: {
@@ -468,7 +468,7 @@
         let articleId = this.$route.query.articleId;
         let pcMemberName = this.$route.query.pcMemberName;
         let that = this;
-        let requestUrl = "api/meeting/alreadyReviewedInfo";
+        let requestUrl = "api/article/alreadyReviewedInfo";
         this.$axios.get(
           requestUrl,
           {params: {
