@@ -51,3 +51,8 @@ spring:
           uri: lb://ARTICLE-SERVICE/
           predicates:
             - Path=/article/**
+
+        - id: util_route
+          uri: lb://AUTHENTICATION-SERVICE/
+          predicates:
+            - Path=/util/users

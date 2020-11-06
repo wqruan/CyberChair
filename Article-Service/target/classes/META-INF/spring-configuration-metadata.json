@@ -1,0 +1,24 @@
+{
+  "groups": [
+    {
+      "name": "jwt.token",
+      "type": "MainService.security.jwt.JwtConfigProperties",
+      "sourceType": "MainService.security.jwt.JwtConfigProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "jwt.token.secret",
+      "type": "java.lang.String",
+      "sourceType": "MainService.security.jwt.JwtConfigProperties",
+      "defaultValue": "FudanSE2020"
+    },
+    {
+      "name": "jwt.token.validity",
+      "type": "java.lang.Integer",
+      "sourceType": "MainService.security.jwt.JwtConfigProperties",
+      "defaultValue": 1800000
+    }
+  ],
+  "hints": []
+}

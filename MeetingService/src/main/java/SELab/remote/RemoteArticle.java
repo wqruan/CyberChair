@@ -17,7 +17,7 @@ public class RemoteArticle {
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://localhost:8082/meeting/getArticlesByContributorName?contributorName="+contributorName,String.class);
 
-        String jsonString = responseEntity.getBody();
+        String jsonString = responseEntity==null?"":responseEntity.getBody();
         ObjectMapper mapper = new ObjectMapper();
         List<Article> ret = mapper.readValue(jsonString, new TypeReference<List<Article>>(){});
         return ret;
@@ -28,7 +28,7 @@ public class RemoteArticle {
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<String> responseEntity = restTemplate.getForEntity("http://localhost:8082/meeting/getArticlesByMeetingNameAndStatus?meetingName="+meetingName + "&status=" + status, String.class);
 
-        String jsonString = responseEntity.getBody();
+        String jsonString = responseEntity==null?"":responseEntity.getBody();
         ObjectMapper mapper = new ObjectMapper();
         List<Article> ret = mapper.readValue(jsonString, new TypeReference<List<Article>>(){});
         return ret;

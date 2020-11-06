@@ -276,7 +276,7 @@ public class UtilService {
                 meetingInfo.getString("submissionDeadlineDate"),
                 meetingInfo.getString("notificationOfAcceptanceDate"),
                 meetingInfo.getString("conferenceDate"),
-                meetingInfo.getString("status") 
+                meetingInfo.getString("status")
         );
         return meeting;
     }

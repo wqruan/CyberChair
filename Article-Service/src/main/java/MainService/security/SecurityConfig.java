@@ -1,7 +1,6 @@
-package SELab.security;
+package MainService.security;
 
-import SELab.security.jwt.JwtRequestFilter;
-import SELab.security.jwt.JwtUserDetailsService;
+import MainService.security.jwt.JwtRequestFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,12 +20,12 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    private JwtUserDetailsService userDetailsService;
+
     private JwtRequestFilter jwtRequestFilter;
 
     @Autowired
-    public SecurityConfig(JwtUserDetailsService userDetailsService, JwtRequestFilter jwtRequestFilter) {
-        this.userDetailsService = userDetailsService;
+    public SecurityConfig( JwtRequestFilter jwtRequestFilter) {
+
         this.jwtRequestFilter = jwtRequestFilter;
     }
 
@@ -42,7 +41,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
 
-                .antMatchers("/register", "/login", "/meeting/meetingInfoById", "/meeting/saveMeeting", "/meeting/meetingInfo").permitAll()
+                .antMatchers("/register", "/article/rebuttalInfo", "/meeting/saveReviewRelation", "/jwtquery/valid", "/utils/pdf","/meeting/getArticlesByContributorName","/meeting/getArticlesByMeetingNameAndStatus").permitAll()
                 .antMatchers(HttpMethod.OPTIONS).permitAll()
 
                 .anyRequest().authenticated();

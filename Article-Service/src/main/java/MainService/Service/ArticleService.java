@@ -493,7 +493,7 @@ public class ArticleService {
         JSONObject userInfo = (JSONObject) tmp.get("responseBody");
         userInfo = (JSONObject) userInfo.get("UserInformation");
         System.out.println(userInfo);
-        User user = new User((Long)userInfo.get("id"),(String) userInfo.get("username"),userInfo.getString("fullname"),"",userInfo.getString("email"),userInfo.getString("institution"),userInfo.getString("region"));
+        User user = new User((int)userInfo.get("id"),(String) userInfo.get("username"),userInfo.getString("fullname"),"",userInfo.getString("email"),userInfo.getString("institution"),userInfo.getString("region"));
         return user;
     }
     private void meetingStatusModifyBeforeRebuttal(Meeting meeting, String reviewConfirmed, String reviewConfirmed2) {

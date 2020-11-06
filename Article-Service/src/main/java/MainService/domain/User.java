@@ -37,7 +37,7 @@ public class User implements UserDetails, Serializable {
         this.region = region;
     }
 
-    public User(Long id,String username, String fullname, String password, String email, String institution, String region) {
+    public User(long id,String username, String fullname, String password, String email, String institution, String region) {
         this.username = username;
         this.fullname = fullname;
         this.password = password;

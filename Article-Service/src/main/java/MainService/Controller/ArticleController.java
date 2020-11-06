@@ -12,10 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
@@ -28,6 +25,7 @@ import java.util.Set;
  * @version : 1.0.0
  * @date : 2020/10/28 21:16
  */
+@RestController
 public class ArticleController {
 
     private Service service;
@@ -168,6 +166,7 @@ public class ArticleController {
     @GetMapping("/meeting/getArticlesByContributorName")
     public List<Article> getArticlesByContributorName(String contributorName){
         logger.debug("Get Articles by ContributorName: " + contributorName);
+
         return service.getArticlesByContributorName(contributorName);
     }
 
